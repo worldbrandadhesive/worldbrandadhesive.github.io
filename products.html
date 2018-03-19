@@ -10,8 +10,12 @@
   </p>
   <a class="get_quote btn btn-primary" href="mailto:sales@worldbrandadhesive.com?body=I%20would%20like%20a%20quote%20for%20World%20Bond%20Construction%20Adhesive.&amp;subject=Quotation%20Request">Get Quote</a>
   <a class="order_sample btn btn-primary" href="mailto:sales@worldbrandadhesive.com?body=I%20would%20like%20to%20order%20a%20sample%20of%20World%20Bond%20Construction%20Adhesive.&amp;subject=Sample%20Request">Order Sample</a>
-  <a href="{{technicalSpecification}}" class="btn">Technical Specification</a>
-  <a href="{{dataSheet}}" class="btn">Material Safety Data Sheet</a>
+  {{#if technicalSpecification}}
+  <a href="{{technicalSpecification}}" class="btn" target="_download">Technical Specification</a>
+  {{/if}}
+  {{#if dataSheet}}
+  <a href="{{dataSheet}}" class="btn" target="_download">Material Safety Data Sheet</a>
+  {{/if}}
 </div>
 </div>
 {{/each}}

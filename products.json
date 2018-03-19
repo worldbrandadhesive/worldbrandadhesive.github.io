@@ -4,7 +4,8 @@
   "description": "A gunnable contact adhesive for bonding a wide variety of construction materials.",
   "availableIn": "320 gm",
   "tags": ["flooring", "aluminium", "cement", "pvc", "steel", "wood"],
-  "technicalSpecification": "/downloads/msds-world_construction_adhesive.pdf"
+  "dataSheet": "/downloads/msds-world_construction_adhesive.pdf",
+  "technicalSpecification": "/downloads/spec-worldbond.pdf"
 },
 {
   "name": "World Brand 200 Adhesive",
@@ -76,7 +77,8 @@
   "description": "Silicone for general glazing and various DIY purposes.",
   "availableIn": "300 ml",
   "tags": ["general-purpose", "glazing", "glass", "plastics"],
-  "technicalSpecification": "/downloads/msds-world_acetoxy_silicone_sealant.pdf"
+  "dataSheet": "/downloads/msds-world_acetoxy_silicone_sealant.pdf",
+  "technicalSpecification": "/downloads/world_brand_acetoxy_tds.pdf"
 },
 {
   "name": "World Brand Acrylic Sealants",
@@ -84,7 +86,8 @@
   "description": "Acrylic sealant for general glazing & various DIY applications.",
   "availableIn": "450 gm",
   "tags": ["flooring", "general-purpose", "glazing", "woodworking", "aluminium"],
-  "technicalSpecification": "/downloads/msds-world_acrylic.pdf"
+  "dataSheet": "/downloads/msds-world_acrylic.pdf",
+  "technicalSpecification": "/downloads/spec-acrylic.pdf"
 },
 {
   "name": "World Brand Carpet Tile 909 Adhesive",
