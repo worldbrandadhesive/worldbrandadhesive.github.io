@@ -35,12 +35,12 @@ $.getJSON('products.json', function(d) {
 
 function renderProducts  (params) {
   var tag = params && params.tag
-  loadHTML('./products.html', () => {
+  loadHTML('/products.html', () => {
     var source = document.getElementById("product-template").innerHTML;
     var template = Handlebars.compile(source);
     var filteredData = filterByTag(tag, data)
     var html = template(filteredData)
-    $("#products").html(html)
+    $("div#products").html(html)
     if (tag) {
       $("li#"+tag).attr("class", "active")
     }
