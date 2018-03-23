@@ -30,7 +30,7 @@ function filterByTag (tag, data) {
 
 var data = []
 $.getJSON('products.json', function(d) {
-  data = d
+  data = R.sortBy(R.prop('name'), d)
 })
 
 function renderProducts  (params) {
