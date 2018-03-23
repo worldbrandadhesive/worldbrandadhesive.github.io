@@ -188,7 +188,7 @@ div.product {
   filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#F0F0F0', EndColorStr='#FFFFFF', GradientType=0);
 }
 
-.btn:hover {
+.btn:hover, .btn:focus, .btn:active {
   color: #FF6600;
   border: 1px solid #FF6600;
 }
@@ -196,10 +196,6 @@ div.product {
 .btn-primary {
   color: #FF6600;
   border: 1px solid #FF6600;
-}
-
-.btn:focus, .btn.active {
-  background: none;
 }
 
 div.details {
