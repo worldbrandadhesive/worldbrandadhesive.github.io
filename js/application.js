@@ -78,11 +78,6 @@ function showSlides () {
   });
 }
 
-function setYear () {
-  var year = new Date().getYear() + 1900
-  $('#copyright').html('Copyright &copy;' + year + ' World Brand Adhesive')
-}
-
 
 // set the default route
 router.on(() => {
@@ -92,4 +87,3 @@ router.on(() => {
 router.notFound((query) => { $('#content').innerHTML = '<h3>Couldn\'t find the page you\'re looking for...</h3>'; });
 
 router.resolve();
-setYear();

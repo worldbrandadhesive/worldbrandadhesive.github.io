@@ -57,6 +57,7 @@ h1,h2,h3,h4,h5,h6 {
 #content {
   background: white;
   padding: 0;
+  margin-bottom: 100px;
 }
 
 .box {
@@ -119,11 +120,6 @@ hr.space {
   color: white;
   font-size: 10px;
   margin-right: 30px;
-}
-
-#plus1 {
-  float: right;
-  padding: 5px;
 }
 
 #pitch h3 {
