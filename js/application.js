@@ -78,8 +78,10 @@ function showSlides () {
   });
 }
 
+$('.navbar-collapse a').click(function(){
+  $('.navbar-collapse').collapse('hide');
+});
 
-// set the default route
 router.on(() => {
   loadHTML('./home.html', showSlides);
 })
