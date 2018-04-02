@@ -30,7 +30,8 @@
   "description": "Contact Adhesive for rubber, metal, wood, leather, plastics, hardboard & etc.",
   "availableIn": "3 kg / 15 kg / 160 kg / 700 gm",
   "tags": ["woodworking", "hardboard", "leather", "metal", "plastics", "rubber", "wood"],
-  "technicalSpecification": "/downloads/msds-wb300.pdf"
+  "dataSheet": "/downloads/msds-wb300.pdf",
+  "technicalSpecification": "/downloads/world_brand_300_adhesive.pdf"
 },
 {
   "name": "500 Adhesive",
@@ -54,7 +55,8 @@
   "description": "Spray adhesive medium viscosity for polyurethane foam, fibre glass & wood",
   "availableIn": "3 kg / 15 kg / 160 kg",
   "tags": ["woodworking", "fibre-glass", "polyurethane-foam", "wood"],
-  "technicalSpecification": "/downloads/msds-wb800.pdf"
+  "dataSheet": "/downloads/msds-wb800.pdf",
+  "technicalSpecification": "/downloads/world_brand_800_adhesive.pdf"
 },
 {
   "name": "808 Eco-Friendly Spray Adhesive",
