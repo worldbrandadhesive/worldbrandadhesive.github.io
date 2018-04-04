@@ -259,7 +259,7 @@ div.details a {
 }
 
 div.slide_description {
-  margin-top: 5px;
+  margin-top: 25px;
   padding: 20px;
   width: 320px;
   color: white;
@@ -267,11 +267,8 @@ div.slide_description {
 
 @media (min-width: 768px) {
   div.slide_description {
-    margin-top: 40px;
     width: 360px;
   }
-
-
 }
 
 .slides_container {

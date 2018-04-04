@@ -58,7 +58,7 @@ function showSlides () {
   $('.slide').show();
   $('.slides').slides({
     preload: true,
-    play: 5000,
+    play: 2500,
     pause: 2500,
     hoverPause: true
   });
