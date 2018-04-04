@@ -13,7 +13,7 @@ function loadHTML(url, cb) {
   req = new XMLHttpRequest();
   req.open('GET', url);
   req.send();
-  req.onload = () => {
+  req.onload = function () {
     $('#content').html(req.responseText)
 		if (cb) cb()
   };
@@ -29,13 +29,13 @@ function filterByTag (tag, data) {
 }
 
 var data = []
-$.getJSON('products.json', function(d) {
+$.getJSON('products.json', function (d) {
   data = R.sortBy(R.prop('name'), d)
 })
 
 function renderProducts  (params) {
   var tag = params && params.tag
-  loadHTML('/products.html', () => {
+  loadHTML('/products.html', function () {
     var source = document.getElementById("product-template").innerHTML;
     var template = Handlebars.compile(source);
     var filteredData = filterByTag(tag, data)
@@ -48,8 +48,8 @@ function renderProducts  (params) {
 }
 
 router.on({
-  '/contact.html': () => { loadHTML('./contact.html'); },
-  '/corporate.html': () => { loadHTML('./corporate.html'); },
+  '/contact.html': function () { loadHTML('./contact.html'); },
+  '/corporate.html': function () { loadHTML('./corporate.html'); },
   '/:tag/products.html': renderProducts,
   '/products.html': renderProducts
 });
@@ -63,29 +63,29 @@ function showSlides () {
     hoverPause: true
   });
 
-  $('a').on('click', function() {
+  $('a').on('click', function () {
     _gaq.push(['_trackEvent', 'Links', 'Click', $(this).attr('href')]);
 
   });
 
-  $('#categories a').click(function(e) {
+  $('#categories a').click(function (e) {
     e.preventDefault();
     $('#categories li.active').removeClass('active');
     $(this).closest('li').addClass('active');
-    $.get($(this).attr('href'), function(data) {
+    $.get($(this).attr('href'), function (data) {
       $('#products').html(data);
     });
   });
 }
 
-$('.navbar-collapse a').click(function(){
+$('.navbar-collapse a').click(function () {
   $('.navbar-collapse').collapse('hide');
 });
 
-router.on(() => {
+router.on(function showHome () {
   loadHTML('./home.html', showSlides);
 })
 
-router.notFound((query) => { $('#content').innerHTML = '<h3>Couldn\'t find the page you\'re looking for...</h3>'; });
+router.notFound(function (query) { $('#content').innerHTML = '<h3>Couldn\'t find the page you\'re looking for...</h3>'; });
 
 router.resolve();
