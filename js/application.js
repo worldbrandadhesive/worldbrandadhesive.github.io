@@ -48,10 +48,12 @@ function renderProducts  (params) {
 }
 
 router.on({
-  '/contact.html': function () { loadHTML('./contact.html'); },
-  '/corporate.html': function () { loadHTML('./corporate.html'); },
+  '/contact': function () { loadHTML('./contact.html'); },
+  '/corporate': function () { loadHTML('./corporate.html'); },
   '/:tag/products.html': renderProducts,
-  '/products.html': renderProducts
+  '/products.html': renderProducts,
+  '/adhesives/:tag': renderProducts,
+  '/adhesives': renderProducts
 });
 
 function showSlides () {
