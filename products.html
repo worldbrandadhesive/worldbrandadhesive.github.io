@@ -1,64 +1,49 @@
-<script id="product-template" type="text/x-handlebars-template">
-{{#each this}}
-<div class="row product">
-<img alt="{{name}}" onerror="imageError(this)" src="{{imageSource}}" />
-<div class="details">
-  <h2>{{name}}</h2>
-  <p>{{description}}</p>
-  <p>
-    {{availableIn}}
-  </p>
-  <a class="order_sample btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfy5p0dGXu8Uez0NXI3JPrZy8dq_O4Fg0vtXxfB5K1DoDnMMA/viewform?entry.1000027={{name}}" target="_order">Get Free Sample</a>
-  {{#if technicalSpecification}}
-  <a href="{{technicalSpecification}}" class="btn" target="_download">Technical Specification</a>
-  {{/if}}
-  {{#if dataSheet}}
-  <a href="{{dataSheet}}" class="btn" target="_download">Material Safety Data Sheet</a>
-  {{/if}}
-</div>
-</div>
-{{/each}}
+---
+title: Products
+layout: default
+---
+
+<script>
+function imageError(source){
+  source.src = '/images/missing.jpg';
+  return true;
+}
 </script>
 
 <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs hidden-sm" id="categories">
+	{% assign applications = '' | split: '' %}
+	{% assign certifications = '' | split: '' %}
+	{% assign surfaces = '' | split: '' %}
+  {% for product in site.products %}
+		{% assign applications = applications | concat: product.applications | uniq %}
+		{% assign certifications = certifications | concat: product.certifications | uniq %}
+		{% assign surfaces = surfaces | concat: product.surfaces | uniq %}
+  {% endfor %}
   <h4>By Certification</h4>
   <ul>
-      <li class="" id="eco-friendly"><a href="/#!/adhesives/eco-friendly">Eco-Friendly</a></li>
+  {% for certification in certifications %}
+    <li class="" id="{{ certification }}"><a href="applications/{{ certification }}">{{ certification }}</a></li>
+  {% endfor %}
   </ul>
   <h4>By Applications</h4>
   <ul>
-    <li class="" id="book-binding"><a href="/#!/adhesives/book-binding">Book Binding</a></li>
-    <li class="" id="carpeting"><a href="/#!/adhesives/carpeting">Carpeting</a></li>
-    <li class="" id="flooring"><a href="/#!/adhesives/flooring">Flooring</a></li>
-    <li class="" id="general-purpose"><a href="/#!/adhesives/general-purpose">General Purpose</a></li>
-    <li class="" id="glazing"><a href="/#!/adhesives/glazing">Glazing</a></li>
-    <li class="" id="piping"><a href="/#!/adhesives/piping">Piping</a></li>
-    <li class="" id="upholstery"><a href="/#!/adhesives/upholstery">Upholstery</a></li>
-    <li class="" id="woodworking"><a href="/#!/adhesives/woodworking">Woodworking</a></li>
+  {% for application in applications %}
+    <li class="" id="{{ application }}"><a href="applications/{{ application }}">{{ application }}</a></li>
+  {% endfor %}
   </ul>
   <h4>By Surfaces</h4>
   <ul>
-    <li class="" id="aluminium"><a href="/#!/adhesives/aluminium">Aluminium</a></li>
-    <li class="" id="carpet"><a href="/#!/adhesives/carpet">Carpet</a></li>
-    <li class="" id="cement"><a href="/#!/adhesives/cement">Cement</a></li>
-    <li class="" id="ceramics"><a href="/#!/adhesives/ceramics">Ceramics</a></li>
-    <li class="" id="fibre-glass"><a href="/#!/adhesives/fibre-glass">Fibre Glass</a></li>
-    <li class="" id="glass"><a href="/#!/adhesives/glass">Glass</a></li>
-    <li class="" id="hardboard"><a href="/#!/adhesives/hardboard">Hardboard</a></li>
-    <li class="" id="leather"><a href="/#!/adhesives/leather">Leather</a></li>
-    <li class="" id="linoleum"><a href="/#!/adhesives/linoleum">Linoleum</a></li>
-    <li class="" id="metal"><a href="/#!/adhesives/metal">Metal</a></li>
-    <li class="" id="plastics"><a href="/#!/adhesives/plastics">Plastics</a></li>
-    <li class="" id="plywood"><a href="/#!/adhesives/plywood">Plywood</a></li>
-    <li class="" id="polyurethane-foam"><a href="/#!/adhesives/polyurethane-foam">Polyurethane Foam</a></li>
-    <li class="" id="pvc"><a href="/#!/adhesives/pvc">PVC</a></li>
-    <li class="" id="rubber"><a href="/#!/adhesives/rubber">Rubber</a></li>
-    <li class="" id="steel"><a href="/#!/adhesives/steel">Steel</a></li>
-    <li class="" id="textile"><a href="/#!/adhesives/textile">Textile</a></li>
-    <li class="" id="vinyl"><a href="/#!/adhesives/vinyl">Vinyl</a></li>
-    <li class="" id="wood"><a href="/#!/adhesives/wood">Wood</a></li>
+  {% for surface in surfaces %}
+    <li class="" id="{{ surface }}"><a href="surfaces/{{ surface }}">{{ surface }}</a></li>
+  {% endfor %}
   </ul>
 </div>
 <div class="col-lg-9 col-md-9 col-sm-9" id="products">
   <h1 id="products-heading"></h1>
+  {% for product in site.products %}
+     {% include product.html %}
+   {% endfor %}
 </div>
+
+
+
