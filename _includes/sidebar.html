@@ -1,0 +1,48 @@
+<script>
+function imageError(source){
+  source.src = '/images/missing.jpg';
+  return true;
+}
+</script>
+
+<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs hidden-sm" id="categories">
+	{% assign applications = '' | split: '' %}
+	{% assign certifications = '' | split: '' %}
+	{% assign surfaces = '' | split: '' %}
+  {% for product in site.products %}
+		{% assign applications = applications | concat: product.applications | uniq | sort %}
+		{% assign certifications = certifications | concat: product.certifications | uniq | sort %}
+		{% assign surfaces = surfaces | concat: product.surfaces | uniq | sort %}
+  {% endfor %}
+  <h4>By Certification</h4>
+  <ul>
+  {% for certification in certifications %}
+    {% if page.certification == certification %}
+      {% assign active = 'active' %}
+    {% endif %}
+    <li class="{{ active }}" id="{{ certification }}"><a href="/products/{{ certification }}">{{ certification }}</a></li>
+    {% assign active = '' %}
+  {% endfor %}
+  </ul>
+  <h4>By Applications</h4>
+  <ul>
+  {% for application in applications %}
+    {% if page.application == application %}
+      {% assign active = 'active' %}
+    {% endif %}
+    <li class="{{ active }}" id="{{ application }}"><a href="/products/{{ application }}">{{ application }}</a></li>
+    {% assign active = '' %}
+  {% endfor %}
+  </ul>
+  <h4>By Surfaces</h4>
+  <ul>
+  {% for surface in surfaces %}
+    {% if page.surface == surface %}
+      {% assign active = 'active' %}
+    {% endif %}
+    <li class="{{ active }}" id="{{ surface }}"><a href="/products/{{ surface }}">{{ surface }}</a></li>
+    {% assign active = '' %}
+  {% endfor %}
+  </ul>
+</div>
+
