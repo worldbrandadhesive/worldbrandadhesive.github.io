@@ -1,6 +1,6 @@
 ---
 layout: default
-surface: Polyurethane-Foam
+surface: Polyurethane Foam
 title: Polyurethane Foam Adhesives
 ---
 {% include sidebar.html %}

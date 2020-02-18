@@ -1,7 +1,7 @@
 ---
 layout: default
-surface: Fibre-Glass
-title: Fibre-Glass Adhesives
+certification: Green Label
+title: Green Label Certified Adhesives
 ---
 {% include sidebar.html %}
 {% include products.html %}

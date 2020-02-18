@@ -1,6 +1,6 @@
 ---
 layout: default
-application: Book-Binding
+application: Book Binding
 title: Book Binding Adhesives
 ---
 {% include sidebar.html %}

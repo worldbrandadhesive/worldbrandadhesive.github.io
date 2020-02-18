@@ -5,7 +5,7 @@ description: Heat resistant spray adhesive for polyurethane foam, fibre glass & 
 availableIn: 3 kg / 15 kg / 160 kg
 certifications: []
 applications: [Upholstery]
-surfaces: [Fibre-Glass, Polyurethane-Foam, Wood]
+surfaces: [Fibre Glass, Polyurethane Foam, Wood]
 technicalSpecification: /downloads/world_brand_high_g-spray.pdf
 ---
 

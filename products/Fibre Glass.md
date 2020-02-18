@@ -1,7 +1,7 @@
 ---
 layout: default
-application: General-Purpose
-title: General Purpose Adhesives
+surface: Fibre Glass
+title: Fibre Glass Adhesives
 ---
 {% include sidebar.html %}
 {% include products.html %}
