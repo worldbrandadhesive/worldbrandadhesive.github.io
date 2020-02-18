@@ -6,10 +6,10 @@
     <p>Available in: {{ product.availableIn }}</p>
     <a class="order_sample btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfy5p0dGXu8Uez0NXI3JPrZy8dq_O4Fg0vtXxfB5K1DoDnMMA/viewform?entry.1000027={{ product.name }}" target="_order">Get Free Sample</a>
     {% if product.technicalSpecification %}
-    <a href="{{product.technicalSpecification}}" class="btn" target="_download">Technical Specification</a>
+      <a href="{{product.technicalSpecification}}" class="btn" target="_download"><ion-icon name="download-outline"></ion-icon> Technical Specification</a>
     {% endif %}
     {% if product.dataSheet %}
-    <a href="{{product.dataSheet}}" class="btn" target="_download">Material Safety Data Sheet</a>
+    <a href="{{product.dataSheet}}" class="btn" target="_download"><ion-icon name="download-outline"></ion-icon> Material Safety Data Sheet</a>
     {% endif %}
   </div>
 </div>

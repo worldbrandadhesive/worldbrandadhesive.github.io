@@ -221,12 +221,11 @@ div.details a {
   font-size: 22px;
 }
 
-#home-contact {
+#home-contact > h6 {
   text-align: center;
 }
 
 #home-contact .btn {
-  margin: 10px;
 }
 
 #references h6 {
