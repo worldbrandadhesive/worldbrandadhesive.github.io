@@ -258,10 +258,17 @@ div.details a {
 img#green-label {
   width: 100px;
   height: 100px;
-  margin-left: 280px;
+  margin-left: 230px;
   margin-top: 10px;
 }
 
+
+img#green-mark {
+  width: 53px;
+  height: 100px;
+  margin-left: 340px;
+  margin-top: 10px;
+}
 
 div.slide_description {
   margin-top: 25px;
