@@ -12,7 +12,7 @@
         <ul class="list-group">
           <li class="list-group-item">
             {{ item.size }} {{ item.price }}
-            <a class="place-order btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfpeuPAQ3K4U7P4KogWGTDFGqAFsoFpoUicib0bRe1C_FPY6Q/viewform?usp=pp_url&entry.1000027={{ product.name }} {{ item.size }}@{{ item.price}}&entry.1863605364=1" target="_order">Place Order</a>
+            <a onclick="gtag_report_conversion ('{{ product.name }}', '{{ item.price }}')" class="place-order btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfpeuPAQ3K4U7P4KogWGTDFGqAFsoFpoUicib0bRe1C_FPY6Q/viewform?usp=pp_url&entry.1000027={{ product.name }} {{ item.size }}@{{ item.price}}&entry.1863605364=1" target="_order">Place Order</a>
           </li>
         </ul>
       {% endfor %}
