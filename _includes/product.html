@@ -3,8 +3,21 @@
   <div class="details">
     <h2>{{ product.name }}</h2>
     <p>{{ product.description }}</p>
-    <p>Available in: {{ product.availableIn }}</p>
-    <a class="order_sample btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfy5p0dGXu8Uez0NXI3JPrZy8dq_O4Fg0vtXxfB5K1DoDnMMA/viewform?entry.1000027={{ product.name }}" target="_order">Get Free Sample</a>
+    {% if product.availableIn %}
+      <p>Available in: {{ product.availableIn }}</p>
+    {% endif %}
+    {% if product.available %}
+      <div class="order">
+      {% for item in product.available %}
+        <ul class="list-group">
+          <li class="list-group-item">
+            {{ item.size }} {{ item.price }}
+            <a class="place-order btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfpeuPAQ3K4U7P4KogWGTDFGqAFsoFpoUicib0bRe1C_FPY6Q/viewform?usp=pp_url&entry.1000027={{ product.name }} {{ item.size }}@{{ item.price}}&entry.1863605364=1" target="_order">Place Order</a>
+          </li>
+        </ul>
+      {% endfor %}
+      </div>
+    {% endif %}
     {% if product.technicalSpecification %}
       <a href="{{product.technicalSpecification}}" class="btn" target="_download"><ion-icon name="download-outline"></ion-icon> Technical Specification</a>
     {% endif %}

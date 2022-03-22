@@ -95,6 +95,15 @@ hr.space {
   font-size: 14px;
 }
 
+.order li {
+  margin-right: 10px;
+  line-height: 30px;
+}
+
+.order .btn {
+  float: right;
+}
+
 #nav li.active a {
   color: #518D03;
 }
