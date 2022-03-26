@@ -96,18 +96,29 @@ hr.space {
 }
 
 .order li {
-  margin-right: 10px;
   line-height: 30px;
 }
 
-.price {
+.order .list-group-item {
+  display: inline-block;
   margin-right: 10px;
-  float: right;
+}
+
+.order .size {
+  float: left;
+  clear: left;
+  margin-right: 10px;
+}
+
+.order .price {
+  float: left;
+  margin-right: 10px;
   font-weight: bold;
  }
 
 .order .btn {
-  float: right;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
 #nav li.active a {
