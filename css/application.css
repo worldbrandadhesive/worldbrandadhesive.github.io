@@ -100,6 +100,12 @@ hr.space {
   line-height: 30px;
 }
 
+.price {
+  margin-right: 10px;
+  float: right;
+  font-weight: bold;
+ }
+
 .order .btn {
   float: right;
 }
