@@ -20,7 +20,7 @@ function imageError(source){
     {% if page.certification == certification %}
       {% assign active = 'active' %}
     {% endif %}
-    <li class="{{ active }}" id="{{ certification }}"><a href="/products/{{ certification }}">{{ certification }}</a></li>
+    <li class="{{ active }}" id="{{ certification }}"><a href="/categories/certifications/{{ certification }}">{{ certification }}</a></li>
     {% assign active = '' %}
   {% endfor %}
   </ul>
@@ -30,7 +30,7 @@ function imageError(source){
     {% if page.application == application %}
       {% assign active = 'active' %}
     {% endif %}
-    <li class="{{ active }}" id="{{ application }}"><a href="/products/{{ application }}">{{ application }}</a></li>
+    <li class="{{ active }}" id="{{ application }}"><a href="/categories/applications/{{ application }}">{{ application }}</a></li>
     {% assign active = '' %}
   {% endfor %}
   </ul>
@@ -40,7 +40,7 @@ function imageError(source){
     {% if page.surface == surface %}
       {% assign active = 'active' %}
     {% endif %}
-    <li class="{{ active }}" id="{{ surface }}"><a href="/products/{{ surface }}">{{ surface }}</a></li>
+    <li class="{{ active }}" id="{{ surface }}"><a href="/categories/surfaces/{{ surface }}">{{ surface }}</a></li>
     {% assign active = '' %}
   {% endfor %}
   </ul>
