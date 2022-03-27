@@ -1,7 +1,7 @@
 <div class="row product">
   <img alt="{{ product.name }}" onerror="imageError(this)" src="{{ product.imageSource }}" />
   <div class="details">
-    <h2>{{ product.name }}</h2>
+    <h2><a href="{{ product.id }}.html">{{ product.name }}</a></h2>
     <p>{{ product.description }}</p>
     {% if product.availableIn %}
       <p>Available in: {{ product.availableIn }}</p>

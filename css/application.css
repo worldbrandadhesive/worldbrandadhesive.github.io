@@ -99,6 +99,10 @@ hr.space {
   line-height: 30px;
 }
 
+.jumbotron {
+  background-color: white;
+}
+
 .order .list-group-item {
   display: inline-block;
   margin-right: 10px;
@@ -227,7 +231,6 @@ div.details {
 }
 
 div.details a {
-  border: 1px solid #F0F0F0;
   margin-bottom: 10px;
   margin-right: 10px;
 }

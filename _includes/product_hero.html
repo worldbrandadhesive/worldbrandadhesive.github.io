@@ -1,0 +1,6 @@
+{% assign products = site.products %}
+{% assign prodId = page.url | split: "." | first %}
+{% assign product = products | where: "id", prodId | first %}
+<div class="jumbotron" id="products">
+  {% include product.html %}
+</div>
