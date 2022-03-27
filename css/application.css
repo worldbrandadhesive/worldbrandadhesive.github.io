@@ -241,7 +241,7 @@ div.details a {
   margin-right: 20px;
 }
 
-.product h2 {
+.product h2 > a {
   color: #518D03;
 }
 
