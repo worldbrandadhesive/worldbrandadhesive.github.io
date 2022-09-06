@@ -250,11 +250,16 @@ div.details a {
   font-size: 22px;
 }
 
-#home-contact > h6 {
+#home-contact {
   text-align: center;
 }
 
 #home-contact .btn {
+  margin: 5px;
+}
+
+#home-contact img.whatsapp {
+  width: 160px;
 }
 
 #references h6 {
