@@ -7,11 +7,6 @@ function showSlides () {
     hoverPause: true
   });
 
-  $('a').on('click', function () {
-    _gaq.push(['_trackEvent', 'Links', 'Click', $(this).attr('href')]);
-
-  });
-
   $('#categories a').click(function (e) {
     e.preventDefault();
     $('#categories li.active').removeClass('active');
