@@ -16,9 +16,9 @@
 title: Your awesome title
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  World Brand Adhesives is the leading adhesive and glue manufacturer in South East Asia with offices in Singapore and Malaysia.
+  Established in 1972, our products are ISO and Green Label certified and have excellent bonding strength.
+    Our products are used on a wide variety of surfaces including cement, wood, PVC, and metal.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description" content="World Brand Adhesives is the leading adhesive and glue manufacturer in South East Asia with offices in Singapore and Malaysia. Established in 1972, our products are ISO and Green Label certified and have excellent bonding strength. Our products are used on a wide variety of surfaces including cement, wood, PVC, and metal.">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ page.title }}</title>
@@ -47,6 +47,7 @@
               <li class="" id="home"><a href="/" title="Home">Home</a></li>
               <li class="" id="products"><a href="/products" title="Products">Products</a></li>
               <li class="" id="corporate"><a href="/corporate.html" title="About Us">About Us</a></li>
+              <li class="" id="blog"><a href="/blog.html" title="Articles">Articles</a></li>
               <li class="" id="contact"><a href="/contact.html" title="Contact">Contact</a></li>
             </ul>
           </div>
