@@ -20,7 +20,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Established in 1972, our products are ISO and Green Label certified and have excellent bonding strength.
     Our products are used on a wide variety of surfaces including cement, wood, PVC, and metal.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://worldbrandadhesive.com"
+url: "https://www.worldbrandadhesive.com"
 #twitter_username: jekyllrb
 #github_username:  jekyll
 
