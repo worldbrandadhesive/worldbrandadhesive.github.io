@@ -2,10 +2,7 @@
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{ page.title }}</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
     <link href="/css/application.css" media="all" rel="stylesheet" type="text/css" />
 
@@ -27,6 +24,7 @@
     <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
     <meta content="authenticity_token" name="csrf-param" />
     <meta content="PiVctG5PkuXKs4a108IboUccYUVRiTZmX2VlUg9bG3o=" name="csrf-token" />
+    {% seo %}
   </head>
   <body class="home">
     <header class="navbar navbar-static-top bs-docs-nav" id="top">
