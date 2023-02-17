@@ -3,8 +3,10 @@ layout: post
 title: "Going Green with Green Label Singapore - Your Ultimate Guide"
 description: "Discover how Green Label Singapore is driving sustainability efforts in the country, and how you can join the green revolution."
 ---
+# Going Green with Green Label Singapore - Your Ultimate Guide
 ![Green Label Singapore](/images/greenlabel.png "Green Label Singapore")
-# Green Label Singapore
+
+## Green Label Singapore
 Green Label Singapore is a certification scheme that aims to promote sustainability and eco-friendliness in Singapore. Launched in 1992 by the Singapore Environment Council (SEC), the scheme has since grown to become a well-recognized and trusted symbol of environmental responsibility in the country.
 
 In this article, we'll explore everything you need to know about Green Label Singapore - from its history and mission to how it works, the benefits of certification, and how you can get involved. So, let's dive in!
