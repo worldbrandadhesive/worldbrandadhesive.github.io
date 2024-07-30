@@ -1,6 +1,6 @@
 ---
 layout: default
-certification: Low Formaldehyde
+emission: Low Formaldehyde
 title: Low Formaldehyde Adhesives
 ---
 {% include sidebar.html %}

@@ -8,13 +8,34 @@ function imageError(source){
 <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs hidden-sm" id="categories">
 	{% assign applications = '' | split: '' %}
 	{% assign certifications = '' | split: '' %}
+	{% assign emissions = '' | split: '' %}
 	{% assign surfaces = '' | split: '' %}
   {% for product in site.products %}
-		{% assign applications = applications | concat: product.applications | uniq | sort %}
-		{% assign certifications = certifications | concat: product.certifications | uniq | sort %}
-		{% assign surfaces = surfaces | concat: product.surfaces | uniq | sort %}
+    {% if product.applications %}
+		  {% assign applications = applications | concat: product.applications | uniq | sort %}
+    {% endif %}
+    {% if product.certifications %}
+		  {% assign certifications = certifications | concat: product.certifications | uniq | sort %}
+    {% endif %}
+    {% if product.emissions %}
+		  {% assign emissions = emissions | concat: product.emissions | uniq | sort %}
+    {% endif %}
+    {% if product.surfaces %}
+		  {% assign surfaces = surfaces | concat: product.surfaces | uniq | sort %}
+    {% endif %}
   {% endfor %}
-  <h4>By Certification</h4>
+  <h4>By Emissions</h4>
+  <ul>
+  {% for emission in emissions %}
+    {% if page.emission == emission %}
+      {% assign active = 'active' %}
+    {% endif %}
+    <li class="{{ active }}" id="{{ emission }}"><a href="/categories/emissions/{{ emission }}">{{ emission }}</a></li>
+    {% assign active = '' %}
+  {% endfor %}
+  </ul>
+ 
+  <h4>By Certifications</h4>
   <ul>
   {% for certification in certifications %}
     {% if page.certification == certification %}

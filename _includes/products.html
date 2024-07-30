@@ -1,4 +1,7 @@
 {% assign products = site.products %}
+{% if page.emission %}
+  {% assign products = products | where_exp: "product", "product.emissions contains page.emission" %}
+{% endif %}
 {% if page.certification %}
   {% assign products = products | where_exp: "product", "product.certifications contains page.certification" %}
 {% endif %}
