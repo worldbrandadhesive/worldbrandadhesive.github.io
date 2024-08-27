@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: en
 title: "The Superiority of Synthetic Rubber Adhesive in Bonding Laminates to Plywood"
 description: "Synthetic rubber adhesive is the go-to option for bonding laminates to plywood due to its superior properties. Read on to discover why."
 ---

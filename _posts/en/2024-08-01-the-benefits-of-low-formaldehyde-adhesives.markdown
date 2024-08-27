@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: en
 title: "The Benefits of Low-Formaldehyde Adhesives: A Solution for Reducing Eye Irritation"
 description: "Discover the benefits of low-formaldehyde adhesives in reducing eye irritation and improving indoor air quality. Learn how these adhesives contribute to healthier environments, compliance with safety standards, and sustainable practices. Find out methods to test for formaldehyde in your home or workplace to ensure a safe and comfortable space."
 ---

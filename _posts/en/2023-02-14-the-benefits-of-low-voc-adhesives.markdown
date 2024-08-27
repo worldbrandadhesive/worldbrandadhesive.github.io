@@ -1,5 +1,6 @@
 ---
 layout: post
+lang: en
 title:  "The Benefits of Using Low Volatile Organic Compound Adhesives"
 description: "Learn about the advantages of low volatile organic compound adhesives for your health and the environment."
 ---

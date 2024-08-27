@@ -31,9 +31,16 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
-
+  - jekyll-polyglot
 collections:
   - products
+
+languages: ["en", "zh", "ms"]
+default_lang: "en"
+exclude_from_localization: ["css", "images"]
+parallel_localization: true
+sass:
+  sourcemap: never
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
