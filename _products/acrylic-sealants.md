@@ -2,7 +2,6 @@
 layout: product
 name: Acrylic Sealants
 imageSource: /images/11.jpg?1420046369
-description: Acrylic sealant for general glazing & various DIY applications.
 availableIn: 450 gm
 applications: [Flooring, General Purpose, Glazing, Woodworking]
 surfaces: [Aluminium]

@@ -2,7 +2,6 @@
 layout: product
 name: Acetic Silicone Sealants
 imageSource: /images/12.jpg?1420046369
-description: Silicone for general glazing and various DIY purposes.
 availableIn: 300 ml
 applications: [General Purpose, Glazing]
 surfaces: [Glass, Plastics]

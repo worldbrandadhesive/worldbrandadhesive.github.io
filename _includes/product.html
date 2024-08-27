@@ -2,9 +2,11 @@
   <img alt="{{ product.name }}" onerror="imageError(this)" src="{{ product.imageSource }}" />
   <div class="details">
     <h2><a href="{{ product.id }}.html">{{ product.name }}</a></h2>
-    <p>{{ product.description }}</p>
+    {% assign product_key = product.id | replace: "/", "_" | replace_first: "_", "" | append: "_description" %}
+    <p>{{ site.data.products[product_key] }}</p>
+
     {% if product.availableIn %}
-      <p>Available in: {{ product.availableIn }}</p>
+    <p>{{ site.data.products.available_in }}: {{ product.availableIn }}</p>
     {% endif %}
     {% if product.available %}
       <div class="order">
