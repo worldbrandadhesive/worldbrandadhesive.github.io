@@ -15,10 +15,6 @@
 # in the templates via {{ site.myvariable }}.
 title: World Brand Adhesive Website
 email: chpeck@worldbrandadhesive.com
-description: >- # this means to ignore newlines until "baseurl:"
-  World Brand Adhesives is the leading adhesive and glue manufacturer in South East Asia with offices in Singapore and Malaysia.
-  Established in 1972, our products are ISO and Green Label certified and have excellent bonding strength.
-    Our products are used on a wide variety of surfaces including cement, wood, PVC, and metal.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.worldbrandadhesive.com"
 #twitter_username: jekyllrb
@@ -33,7 +29,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-polyglot
 collections:
-  - products
+  products:
+    output: true
 
 languages: ["en", "zh", "ms"]
 default_lang: "en"
