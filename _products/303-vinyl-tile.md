@@ -1,4 +1,5 @@
 ---
+layout: product
 name: 303 Vinyl Tile Adhesive
 imageSource: /images/17.jpg?1420046369
 description: Adhesive for vinyl flooring.

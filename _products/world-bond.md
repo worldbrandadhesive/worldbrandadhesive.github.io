@@ -1,4 +1,5 @@
 ---
+layout: product
 name: World Bond Construction Adhesive
 imageSource: /images/16.jpg
 description: A gunnable contact adhesive for bonding a wide variety of construction materials.

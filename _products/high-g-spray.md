@@ -1,4 +1,5 @@
 ---
+layout: product
 name: High G-Spray Adhesive
 imageSource: /images/13.jpg?1420046369
 description: Heat resistant spray adhesive for polyurethane foam, fibre glass & wood
