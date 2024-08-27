@@ -24,44 +24,47 @@ function imageError(source){
 		  {% assign surfaces = surfaces | concat: product.surfaces | uniq | sort %}
     {% endif %}
   {% endfor %}
-  <h4>By Emissions</h4>
+  {% if site.default_lang != site.active_lang %}
+    {% assign prefix = site.active_lang | append: '/' %}
+  {% endif %}
+  <h4>{{ site.data.categories.by_emissions }}</h4>
   <ul>
   {% for emission in emissions %}
     {% if page.emission == emission %}
       {% assign active = 'active' %}
     {% endif %}
-    <li class="{{ active }}" id="{{ emission }}"><a href="/categories/emissions/{{ emission }}">{{ emission }}</a></li>
+    <li class="{{ active }}" id="{{ emission }}"><a href="/{{prefix}}categories/emissions/{{ emission }}">{{ site.data.categories[emission] }}</a></li>
     {% assign active = '' %}
   {% endfor %}
   </ul>
  
-  <h4>By Certifications</h4>
+  <h4>{{ site.data.categories.by_certifications }}</h4>
   <ul>
   {% for certification in certifications %}
     {% if page.certification == certification %}
       {% assign active = 'active' %}
     {% endif %}
-    <li class="{{ active }}" id="{{ certification }}"><a href="/categories/certifications/{{ certification }}">{{ certification }}</a></li>
+    <li class="{{ active }}" id="{{ certification }}"><a href="/{{prefix}}categories/certifications/{{ certification }}">{{ site.data.categories[certification]}}</a></li>
     {% assign active = '' %}
   {% endfor %}
   </ul>
-  <h4>By Applications</h4>
+  <h4>{{ site.data.categories.by_applications }}</h4>
   <ul>
   {% for application in applications %}
     {% if page.application == application %}
       {% assign active = 'active' %}
     {% endif %}
-    <li class="{{ active }}" id="{{ application }}"><a href="/categories/applications/{{ application }}">{{ application }}</a></li>
+    <li class="{{ active }}" id="{{ application }}"><a href="/{{prefix}}categories/applications/{{ application }}">{{ site.data.categories[application] }}</a></li>
     {% assign active = '' %}
   {% endfor %}
   </ul>
-  <h4>By Surfaces</h4>
+  <h4>{{ site.data.categories.by_surfaces }}</h4>
   <ul>
   {% for surface in surfaces %}
     {% if page.surface == surface %}
       {% assign active = 'active' %}
     {% endif %}
-    <li class="{{ active }}" id="{{ surface }}"><a href="/categories/surfaces/{{ surface }}">{{ surface }}</a></li>
+    <li class="{{ active }}" id="{{ surface }}"><a href="/{{prefix}}categories/surfaces/{{ surface }}">{{ site.data.categories[surface] }}</a></li>
     {% assign active = '' %}
   {% endfor %}
   </ul>
