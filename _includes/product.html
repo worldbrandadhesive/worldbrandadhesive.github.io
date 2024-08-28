@@ -22,10 +22,10 @@
       </div>
     {% endif %}
     {% if product.technicalSpecification %}
-      <a href="{{product.technicalSpecification}}" class="btn" target="_download"><ion-icon name="download-outline"></ion-icon> Technical Specification</a>
+      <a href="{{product.technicalSpecification}}" class="btn" target="_download"><ion-icon name="download-outline"></ion-icon> {{ site.data.products.technical_specification }}</a>
     {% endif %}
     {% if product.dataSheet %}
-    <a href="{{product.dataSheet}}" class="btn" target="_download"><ion-icon name="download-outline"></ion-icon> Material Safety Data Sheet</a>
+    <a href="{{product.dataSheet}}" class="btn" target="_download"><ion-icon name="download-outline"></ion-icon> {{ site.data.products.msds }}</a>
     {% endif %}
   </div>
 </div>

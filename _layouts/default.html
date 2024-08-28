@@ -59,7 +59,16 @@
 
     <footer class="footer">
       <div class="container">
-        <span class="text-muted">{{ 'now' | date: "%Y" }} © {{ site.data.l10n.title }}</span>
+				<div class="row">
+					<div class="col-md-6">
+						<span class="text-muted">{{ 'now' | date: "%Y" }} © {{ site.data.l10n.title }}</span>
+					</div>
+					<div class="col-md-6 lang-switcher">
+						<span class="pull-right">
+						{%- include lang-switcher.html -%}
+						</span>
+					</div>
+				</div>
       </div>
     </footer>
   </body>
