@@ -6,3 +6,10 @@ $(function() {
     });
   });
 })
+
+function imageError(source){
+  source.src = '/images/missing.jpg';
+  return true;
+}
+
+
