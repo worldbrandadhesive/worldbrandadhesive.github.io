@@ -1,7 +1,7 @@
 ---
 layout: product
 name: Acrylic Sealants
-imageSource: /images/11.jpg?1420046369
+imageSource: /images/as.jpg
 availableIn: 450 gm
 applications: [Flooring, General Purpose, Glazing, Woodworking]
 surfaces: [Aluminium]
