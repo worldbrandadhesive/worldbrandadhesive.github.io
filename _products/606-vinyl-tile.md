@@ -1,6 +1,7 @@
 ---
 layout: product
 name: 606 Vinyl Tile Adhesive
+order: 160
 imageSource: /images/8.jpg?1420046369
 availableIn: 18 kg
 applications: [Carpeting, Flooring]

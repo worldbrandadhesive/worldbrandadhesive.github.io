@@ -1,4 +1,4 @@
-{% assign products = site.products %}
+{% assign products = site.products | sort: 'order' %}
 {% if page.emission %}
   {% assign products = products | where_exp: "product", "product.emissions contains page.emission" %}
 {% endif %}

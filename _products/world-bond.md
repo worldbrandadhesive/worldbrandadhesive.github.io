@@ -1,6 +1,7 @@
 ---
 layout: product
 name: World Bond Construction Adhesive
+order: 1000
 imageSource: /images/wb.jpg
 availableIn: 320 gm
 dataSheet: /downloads/msds-world_construction_adhesive.pdf
