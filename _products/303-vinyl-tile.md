@@ -1,6 +1,6 @@
 ---
 layout: product
-name: 303 Vinyl Tile Adhesive
+name: VT-303 Vinyl Tile Adhesive
 imageSource: /images/17.jpg?1420046369
 availableIn: 3 kg / 15 kg
 applications: [Flooring]
