@@ -2,44 +2,79 @@
 title: Contact
 layout: default
 ---
-<div class="col-lg-12 col-md-12 col-sm-12">
-    <p>
-    <h3>{{ site.data.l10n.email }}</h3>
-    {{ site.data.l10n.email }}:
-    <a class="btn btn-primary" href="mailto:sales@worldbrandadhesive.com">sales@worldbrandadhesive.com</a>
-</div>
-        <div class="col-lg-6 col-md-6 col-sm-6">
-            <h3>{{ site.data.l10n.singapore }}</h3>
-            <p>
+<div class="container-fluid px-md-4">
+  <div class="row mb-4">
+    <div class="col-12">
+      <h3>{{ site.data.l10n.email }}</h3>
+      <p class="d-flex align-items-center gap-2">
+        {{ site.data.l10n.email }}:
+        <a class="btn btn-primary" href="mailto:sales@worldbrandadhesive.com">sales@worldbrandadhesive.com</a>
+      </p>
+    </div>
+  </div>
+  
+  <div class="row g-4">
+    <div class="col-lg-6">
+      <div class="card h-100 border-0 bg-white">
+        <div class="card-body">
+          <h3>{{ site.data.l10n.singapore }}</h3>
+          <p>
             10 Admiralty Street #01<br/>
             76 Northlink Building<br/>
             Singapore 757695<br/>
-            Singapore<br/>
-            <a aria-label="Chat on WhatsApp" href="https://wa.me/6567539033" target="_"><img height="30" class="whatsapp" alt="Chat on WhatsApp" src="/images/WhatsAppButtonGreenSmall.png" /></a><br/>
-            {{ site.data.l10n.phone }}:
-            <a class="btn" href="tel:+65 67539033">+65 67539033</a> /
-            <a class="btn" href="tel:+65 67523383">+65 67523383</a> /
-            <a class="btn" href="tel:+65 62696542">+65 62696542</a> <br/>
-            {{ site.data.l10n.fax }}: +65 67533136<br/>
-            </p>
-
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31908.34126912019!2d103.78294016639292!3d1.448906634541501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da135c618fd6ab%3A0x7a380b20e96c230!2sNorth%20Link%20Building!5e0!3m2!1sen!2ssg!4v1675214104740!5m2!1sen!2ssg" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            Singapore
+          </p>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <a aria-label="Chat on WhatsApp" href="https://wa.me/6567539033" target="_">
+              <img height="30" class="whatsapp" alt="Chat on WhatsApp" src="/images/WhatsAppButtonGreenSmall.png" />
+            </a>
+          </div>
+          <p class="mb-2">
+            {{ site.data.l10n.phone }}:<br/>
+            <a class="btn btn-outline-primary me-2 mb-2" href="tel:+65 67539033">+65 67539033</a>
+            <a class="btn btn-outline-primary me-2 mb-2" href="tel:+65 67523383">+65 67523383</a>
+            <a class="btn btn-outline-primary mb-2" href="tel:+65 62696542">+65 62696542</a>
+          </p>
+          <p class="mb-4">
+            {{ site.data.l10n.fax }}: +65 67533136
+          </p>
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31908.34126912019!2d103.78294016639292!3d1.448906634541501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da135c618fd6ab%3A0x7a380b20e96c230!2sNorth%20Link%20Building!5e0!3m2!1sen!2ssg!4v1675214104740!5m2!1sen!2ssg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-6">
-            <h3>{{ site.data.l10n.malaysia }}</h3>
-            <p>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card h-100 border-0 bg-white">
+        <div class="card-body">
+          <h3>{{ site.data.l10n.malaysia }}</h3>
+          <p>
             45, Jalan Gemilang 3<br/>
             Taman Perindustrian Cemerlang<br/>
             81800 Ulu Tiram<br/>
-            Johor, Malaysia<br/>
-            <a aria-label="Chat on WhatsApp" href="https://wa.me/60187654635" target="_"><img height="30" class="whatsapp" alt="Chat on WhatsApp" src="/images/WhatsAppButtonGreenSmall.png" /></a><br/>
-            {{ site.data.l10n.phone }}:
-            <a class="btn" href="tel:+60 18 7654635">+60 18 7654635</a> /
-            <a class="btn" href="tel:+60 7 8630584">+60 7 8630584</a> /
-            <a class="btn" href="tel:+60 7 8630585">+60 7 8630585</a> <br/>
-            {{ site.data.l10n.fax }}: +60 7 8630581<br/>
-            </p>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.3640539035246!2d103.82171711352693!3d1.5470211582861844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da6bf936239581%3A0x7e220c7883365def!2s45%2C%20Jalan%20Gemilang%203%2C%20Taman%20Perindustrian%20Cemerlang%2C%2081800%20Ulu%20Tiram%2C%20Johor%2C%20Malaysia!5e0!3m2!1sen!2ssg!4v1675214250718!5m2!1sen!2ssg" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <hr class="space"/>
+            Johor, Malaysia
+          </p>
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <a aria-label="Chat on WhatsApp" href="https://wa.me/60187654635" target="_">
+              <img height="30" class="whatsapp" alt="Chat on WhatsApp" src="/images/WhatsAppButtonGreenSmall.png" />
+            </a>
+          </div>
+          <p class="mb-2">
+            {{ site.data.l10n.phone }}:<br/>
+            <a class="btn btn-outline-primary me-2 mb-2" href="tel:+60 18 7654635">+60 18 7654635</a>
+            <a class="btn btn-outline-primary me-2 mb-2" href="tel:+60 7 8630584">+60 7 8630584</a>
+            <a class="btn btn-outline-primary mb-2" href="tel:+60 7 8630585">+60 7 8630585</a>
+          </p>
+          <p class="mb-4">
+            {{ site.data.l10n.fax }}: +60 7 8630581
+          </p>
+          <div class="ratio ratio-16x9">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.3640539035246!2d103.82171711352693!3d1.5470211582861844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da6bf936239581%3A0x7e220c7883365def!2s45%2C%20Jalan%20Gemilang%203%2C%20Taman%20Perindustrian%20Cemerlang%2C%2081800%20Ulu%20Tiram%2C%20Johor%2C%20Malaysia!5e0!3m2!1sen!2ssg!4v1675214250718!5m2!1sen!2ssg" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
 

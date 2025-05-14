@@ -3,88 +3,131 @@ title: World Brand Adhesive and Glue Manufacturer
 layout: default
 ---
 
-<div class="slides">
-  <div class="slides_container">
-    <div class="slide" style="display:none">
-      <div class="slide_description">
-        <a href="/categories/certifications/Eco-Friendly">
+<div id="homeCarousel" class="carousel slide carousel-fade mb-4" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="/images/slide3.jpg?1420046369" class="d-block w-100" alt="Eco-Friendly">
+      <div class="carousel-caption">
+        <a href="/categories/certifications/Eco-Friendly" class="text-white text-decoration-none">
           <h1>{{ site.data.l10n.slide1_h1 }}</h1>
           <p>{{ site.data.l10n.slide1_p }}</p>
-          <img alt="Slide3" src="/images/slide3.jpg?1420046369" />
-          <img alt="Green Label Singapore" id="green-label" src="/images/greenlabel.png" />
-          <img alt="SGBC Green Mark" id="green-mark" src="/images/greenmark.png" />
+          <div class="d-flex justify-content-center align-items-center gap-3 mt-3">
+            <img alt="Green Label Singapore" class="img-fluid" style="height: 60px;" src="/images/greenlabel.png">
+            <img alt="SGBC Green Mark" class="img-fluid" style="height: 60px;" src="/images/greenmark.png">
+          </div>
         </a>
       </div>
     </div>
-    <div class="slide" style="display:none">
-      <div class="slide_description">
-        <a href="/categories/applications/Flooring">
+    <div class="carousel-item">
+      <img src="/images/slide0.jpg?1420046369" class="d-block w-100" alt="Flooring">
+      <div class="carousel-caption">
+        <a href="/categories/applications/Flooring" class="text-white text-decoration-none">
           <h1>{{ site.data.l10n.slide2_h1 }}</h1>
           <p>{{ site.data.l10n.slide2_p }}</p>
-          <img alt="Slide0" src="/images/slide0.jpg?1420046369" />
         </a>
       </div>
     </div>
-    <div class="slide" style="display:none">
-      <div class="slide_description">
-        <a href="/categories/applications/Woodworking">
+    <div class="carousel-item">
+      <img src="/images/slide1.jpg?1420046369" class="d-block w-100" alt="Woodworking">
+      <div class="carousel-caption">
+        <a href="/categories/applications/Woodworking" class="text-white text-decoration-none">
           <h1>{{ site.data.l10n.slide3_h1 }}</h1>
           <p>{{ site.data.l10n.slide3_p }}</p>
-          <img alt="Slide1" src="/images/slide1.jpg?1420046369" />
         </a>
       </div>
     </div>
-    <div class="slide" style="display:none">
-      <div class="slide_description">
-        <a href="/contact.html">
+    <div class="carousel-item">
+      <img src="/images/slide2.jpg?1420046369" class="d-block w-100" alt="Contact">
+      <div class="carousel-caption">
+        <a href="/contact.html" class="text-white text-decoration-none">
           <h1>{{ site.data.l10n.slide4_h1 }}</h1>
           <p>{{ site.data.l10n.slide4_p }}</p>
-          <img alt="Slide2" src="/images/slide2.jpg?1420046369" />
         </a>
       </div>
     </div>
   </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12" id="pitch">
-  <div class="col-lg-3 col-md-3 col-sm-3">
-    <h3>{{ site.data.l10n.pitch1_h3 }}</h3>
-    {{ site.data.l10n.pitch1 }}
-  </div>
-  <div class="col-lg-3 col-md-3 col-sm-3">
-    <h3>{{ site.data.l10n.pitch2_h3 }}</h3>
-    {{ site.data.l10n.pitch2 }}
-  </div>
-  <div class="col-lg-3 col-md-3 col-sm-3">
-    <h3>{{ site.data.l10n.pitch3_h3 }}</h3>
-    {{ site.data.l10n.pitch3 }}
-  </div>
-  <div class="col-lg-3 col-md-3 col-sm-3">
-    <h3>{{ site.data.l10n.pitch4_h3 }}</h3>
-    {{ site.data.l10n.pitch4 }}
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-6 col-md-6 col-sm-6" id="home-contact">
-  <div class="col-lg-12 col-md-12 col-sm-12 text-center">
-    <a href="/products" class="btn btn-lg btn-primary">{{ site.data.l10n.products }}</a>
-    <a href="/contact" class="btn btn-lg btn-primary">{{ site.data.l10n.contact }}</a>
-  </div>
-    <a class="btn" href="mailto:sales@worldbrandadhesive.com">sales@worldbrandadhesive.com</a>
-    <div class="row">
-      <a href="tel:+65 6753 9033" class="btn">&nbsp;+65 6753 9033</a>
-      <a class="whatsapp"  aria-label="Chat on WhatsApp" href="https://wa.me/6567539033" target="_"><img class="whatsapp" alt="Chat on WhatsApp" src="/images/WhatsAppButtonGreenSmall.png" /></a>
-    </div>
-    <div class="row">
-      <a href="tel:+60 187654635" class="btn">&nbsp;+60 187654635</a>
-      <a class="whatsapp"  aria-label="Chat on WhatsApp" href="https://wa.me/60187654635" target="_"><img class="whatsapp" alt="Chat on WhatsApp" src="/images/WhatsAppButtonGreenSmall.png" /></a>
+
+<div class="bg-dark text-white py-5" id="pitch">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <h3>{{ site.data.l10n.pitch1_h3 }}</h3>
+        <p class="mb-0">{{ site.data.l10n.pitch1 }}</p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h3>{{ site.data.l10n.pitch2_h3 }}</h3>
+        <p class="mb-0">{{ site.data.l10n.pitch2 }}</p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h3>{{ site.data.l10n.pitch3_h3 }}</h3>
+        <p class="mb-0">{{ site.data.l10n.pitch3 }}</p>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h3>{{ site.data.l10n.pitch4_h3 }}</h3>
+        <p class="mb-0">{{ site.data.l10n.pitch4 }}</p>
+      </div>
     </div>
   </div>
-  <div class="col-lg-6 col-md-6 col-sm-6" id="references">
-    <h6>{{ site.data.l10n.references_h6 }}</h6>
-    <img alt="Marina-bay-sands-logo" src="/images/marina-bay-sands-logo.jpg?1420046369" />
-    <img alt="Rws_logo" src="/images/RWS_Logo.gif?1420046369" />
-    <img alt="Changi_airport_group_logo" src="/images/changi_airport_group_logo.jpg?1420046369" />
+</div>
+
+<div class="container py-5">
+  <div class="row g-4">
+    <div class="col-lg-6" id="home-contact">
+      <div class="text-center mb-4">
+        <a href="/products" class="btn btn-lg btn-primary me-2">
+          <i class="bi bi-box me-2"></i>{{ site.data.l10n.products }}
+        </a>
+        <a href="/contact" class="btn btn-lg btn-primary">
+          <i class="bi bi-envelope me-2"></i>{{ site.data.l10n.contact }}
+        </a>
+      </div>
+      <div class="d-flex flex-column gap-3">
+        <a class="btn btn-outline-primary" href="mailto:sales@worldbrandadhesive.com">
+          <i class="bi bi-envelope me-2"></i>sales@worldbrandadhesive.com
+        </a>
+        <div class="d-flex align-items-center gap-2">
+          <a href="tel:+65 6753 9033" class="btn btn-outline-primary flex-grow-1">
+            <i class="bi bi-telephone me-2"></i>+65 6753 9033
+          </a>
+          <a class="btn btn-success" aria-label="Chat on WhatsApp" href="https://wa.me/6567539033" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+          <a href="tel:+60 187654635" class="btn btn-outline-primary flex-grow-1">
+            <i class="bi bi-telephone me-2"></i>+60 187654635
+          </a>
+          <a class="btn btn-success" aria-label="Chat on WhatsApp" href="https://wa.me/60187654635" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6" id="references">
+      <h6 class="text-center mb-4">{{ site.data.l10n.references_h6 }}</h6>
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-4">
+        <img alt="Marina Bay Sands" src="/images/marina-bay-sands-logo.jpg?1420046369" class="img-fluid" style="max-height: 60px;">
+        <img alt="Resorts World Sentosa" src="/images/RWS_Logo.gif?1420046369" class="img-fluid" style="max-height: 60px;">
+        <img alt="Changi Airport Group" src="/images/changi_airport_group_logo.jpg?1420046369" class="img-fluid" style="max-height: 60px;">
+      </div>
+    </div>
   </div>
 </div>
+
 <script src="/js/home.js" type="text/javascript"></script>
 

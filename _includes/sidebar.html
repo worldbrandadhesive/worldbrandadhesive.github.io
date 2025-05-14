@@ -1,65 +1,120 @@
-<div class="col-lg-3 col-md-3 col-sm-3 hidden-xs hidden-sm" id="categories">
-	{% assign applications = '' | split: '' %}
-	{% assign certifications = '' | split: '' %}
-	{% assign emissions = '' | split: '' %}
-	{% assign surfaces = '' | split: '' %}
-  {% for product in site.products %}
-    {% if product.applications %}
-		  {% assign applications = applications | concat: product.applications | uniq | sort %}
+<div class="col-lg-3 col-md-4" id="categories">
+  <div class="sticky-top py-4" style="top: 76px;">
+    {% assign applications = '' | split: '' %}
+    {% assign certifications = '' | split: '' %}
+    {% assign emissions = '' | split: '' %}
+    {% assign surfaces = '' | split: '' %}
+    {% for product in site.products %}
+      {% if product.applications %}
+        {% assign applications = applications | concat: product.applications | uniq | sort %}
+      {% endif %}
+      {% if product.certifications %}
+        {% assign certifications = certifications | concat: product.certifications | uniq | sort %}
+      {% endif %}
+      {% if product.emissions %}
+        {% assign emissions = emissions | concat: product.emissions | uniq | sort %}
+      {% endif %}
+      {% if product.surfaces %}
+        {% assign surfaces = surfaces | concat: product.surfaces | uniq | sort %}
+      {% endif %}
+    {% endfor %}
+    {% if site.default_lang != site.active_lang %}
+      {% assign prefix = site.active_lang | append: '/' %}
     {% endif %}
-    {% if product.certifications %}
-		  {% assign certifications = certifications | concat: product.certifications | uniq | sort %}
-    {% endif %}
-    {% if product.emissions %}
-		  {% assign emissions = emissions | concat: product.emissions | uniq | sort %}
-    {% endif %}
-    {% if product.surfaces %}
-		  {% assign surfaces = surfaces | concat: product.surfaces | uniq | sort %}
-    {% endif %}
-  {% endfor %}
-  {% if site.default_lang != site.active_lang %}
-    {% assign prefix = site.active_lang | append: '/' %}
-  {% endif %}
-  <h4>{{ site.data.categories.by_emissions }}</h4>
-  <ul>
-  {% for emission in emissions %}
-    {% if page.emission == emission %}
-      {% assign active = 'active' %}
-    {% endif %}
-    <li class="{{ active }}" id="{{ emission }}"><a href="/{{prefix}}categories/emissions/{{ emission }}">{{ site.data.categories[emission] }}</a></li>
-    {% assign active = '' %}
-  {% endfor %}
-  </ul>
- 
-  <h4>{{ site.data.categories.by_certifications }}</h4>
-  <ul>
-  {% for certification in certifications %}
-    {% if page.certification == certification %}
-      {% assign active = 'active' %}
-    {% endif %}
-    <li class="{{ active }}" id="{{ certification }}"><a href="/{{prefix}}categories/certifications/{{ certification }}">{{ site.data.categories[certification]}}</a></li>
-    {% assign active = '' %}
-  {% endfor %}
-  </ul>
-  <h4>{{ site.data.categories.by_applications }}</h4>
-  <ul>
-  {% for application in applications %}
-    {% if page.application == application %}
-      {% assign active = 'active' %}
-    {% endif %}
-    <li class="{{ active }}" id="{{ application }}"><a href="/{{prefix}}categories/applications/{{ application }}">{{ site.data.categories[application] }}</a></li>
-    {% assign active = '' %}
-  {% endfor %}
-  </ul>
-  <h4>{{ site.data.categories.by_surfaces }}</h4>
-  <ul>
-  {% for surface in surfaces %}
-    {% if page.surface == surface %}
-      {% assign active = 'active' %}
-    {% endif %}
-    <li class="{{ active }}" id="{{ surface }}"><a href="/{{prefix}}categories/surfaces/{{ surface }}">{{ site.data.categories[surface] }}</a></li>
-    {% assign active = '' %}
-  {% endfor %}
-  </ul>
+    
+    <div class="accordion accordion-flush border rounded bg-white" id="categoriesAccordion">
+      <div class="accordion-item">
+        <h4 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#emissionsCollapse" aria-expanded="true">
+            <i class="bi bi-droplet me-2"></i>{{ site.data.categories.by_emissions }}
+          </button>
+        </h4>
+        <div id="emissionsCollapse" class="accordion-collapse collapse show">
+          <div class="accordion-body p-0">
+            <div class="list-group list-group-flush">
+              {% for emission in emissions %}
+                {% if page.emission == emission %}
+                  {% assign active = 'active' %}
+                {% endif %}
+                <a href="/{{prefix}}categories/emissions/{{ emission }}" class="list-group-item list-group-item-action {{ active }}" id="{{ emission }}">
+                  {{ site.data.categories[emission] }}
+                </a>
+                {% assign active = '' %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h4 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#certificationsCollapse" aria-expanded="true">
+            <i class="bi bi-award me-2"></i>{{ site.data.categories.by_certifications }}
+          </button>
+        </h4>
+        <div id="certificationsCollapse" class="accordion-collapse collapse show">
+          <div class="accordion-body p-0">
+            <div class="list-group list-group-flush">
+              {% for certification in certifications %}
+                {% if page.certification == certification %}
+                  {% assign active = 'active' %}
+                {% endif %}
+                <a href="/{{prefix}}categories/certifications/{{ certification }}" class="list-group-item list-group-item-action {{ active }}" id="{{ certification }}">
+                  {{ site.data.categories[certification]}}
+                </a>
+                {% assign active = '' %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h4 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#applicationsCollapse" aria-expanded="true">
+            <i class="bi bi-tools me-2"></i>{{ site.data.categories.by_applications }}
+          </button>
+        </h4>
+        <div id="applicationsCollapse" class="accordion-collapse collapse show">
+          <div class="accordion-body p-0">
+            <div class="list-group list-group-flush">
+              {% for application in applications %}
+                {% if page.application == application %}
+                  {% assign active = 'active' %}
+                {% endif %}
+                <a href="/{{prefix}}categories/applications/{{ application }}" class="list-group-item list-group-item-action {{ active }}" id="{{ application }}">
+                  {{ site.data.categories[application] }}
+                </a>
+                {% assign active = '' %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <h4 class="accordion-header">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#surfacesCollapse" aria-expanded="true">
+            <i class="bi bi-grid me-2"></i>{{ site.data.categories.by_surfaces }}
+          </button>
+        </h4>
+        <div id="surfacesCollapse" class="accordion-collapse collapse show">
+          <div class="accordion-body p-0">
+            <div class="list-group list-group-flush">
+              {% for surface in surfaces %}
+                {% if page.surface == surface %}
+                  {% assign active = 'active' %}
+                {% endif %}
+                <a href="/{{prefix}}categories/surfaces/{{ surface }}" class="list-group-item list-group-item-action {{ active }}" id="{{ surface }}">
+                  {{ site.data.categories[surface] }}
+                </a>
+                {% assign active = '' %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 

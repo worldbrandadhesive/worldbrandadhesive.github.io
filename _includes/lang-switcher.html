@@ -1,12 +1,14 @@
-{% for lang in site.languages %}
+<div class="btn-group" role="group" aria-label="Language Switcher">
+  {% for lang in site.languages %}
     {% assign lang_name = site.data[lang].l10n.lang_name %}
     {% if lang == site.active_lang %}
-{{ lang_name }}
+      <button type="button" class="btn btn-outline-secondary active" disabled>{{ lang_name }}</button>
     {% else %}
-        {% if lang == site.default_lang %}
-<a href=" {{ page.url }}">{{ lang_name }}</a>
-        {% else %}
-<a href="/{{ lang }}{{ page.url }}">{{ lang_name }}</a>
-        {% endif %}
+      {% if lang == site.default_lang %}
+        <a href="{{ page.url }}" class="btn btn-outline-secondary">{{ lang_name }}</a>
+      {% else %}
+        <a href="/{{ lang }}{{ page.url }}" class="btn btn-outline-secondary">{{ lang_name }}</a>
+      {% endif %}
     {% endif %}
-{% endfor %}
+  {% endfor %}
+</div>

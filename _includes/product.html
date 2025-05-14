@@ -1,34 +1,59 @@
-<div class="row product">
-  <a href="{{ product.id }}.html">
-    <img alt="{{ product.name }}" onerror="imageError(this)" src="{{ product.imageSource }}" />
-  </a>
-  <div class="details">
-    <h2><a href="{{ product.id }}.html">{{ product.name }}</a></h2>
-    {% assign product_key = product.id | replace: "/", "_" | replace_first: "_", "" | append: "_description" %}
-    <p>{{ site.data.products[product_key] }}</p>
-
-    {% if product.availableIn %}
-    <p>{{ site.data.products.available_in }}: {{ product.availableIn }}</p>
-    {% endif %}
-    {% if product.available %}
-    <div class="order">
-      {% for item in product.available %}
-      <ul class="list-group">
-        <li class="list-group-item">
-          <span class="size">{{ item.size }}</span>
-          <span class="price">{{ item.price }}</span>
-          <a class="place-order btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSfpeuPAQ3K4U7P4KogWGTDFGqAFsoFpoUicib0bRe1C_FPY6Q/viewform?usp=pp_url&entry.1000027={{ product.name }} {{ item.size }} @ {{ item.price}}&entry.1863605364=10" target="_order">Order</a>
-        </li>
-      </ul>
-      {% endfor %}
+<div class="card product mb-4 border-0 shadow-sm h-100">
+  <div class="row g-0 h-100">
+    <div class="col-md-4 bg-white d-flex align-items-center justify-content-center" style="min-width: 130px;">
+      <a href="{{ product.id }}.html" class="d-block" style="width: 130px; height: 130px;">
+        <img alt="{{ product.name }}" onerror="imageError(this)" src="{{ product.imageSource }}" class="img-fluid rounded-start w-100 h-100 object-fit-cover" />
+      </a>
     </div>
-    {% endif %}
-    {% if product.technicalSpecification %}
-    <a href="{{product.technicalSpecification}}" class="btn" target="_download"><ion-icon name="download-outline"></ion-icon> {{ site.data.products.technical_specification }}</a>
-    {% endif %}
-    {% if product.dataSheet %}
-    <a href="{{product.dataSheet}}" class="btn" target="_download"><ion-icon name="download-outline"></ion-icon> {{ site.data.products.sds }}</a>
-    {% endif %}
+    <div class="col-md-8">
+      <div class="card-body d-flex flex-column h-100">
+        <div>
+          <h2 class="card-title h4">
+            <a href="{{ product.id }}.html" class="text-decoration-none stretched-link">{{ product.name }}</a>
+          </h2>
+          {% assign product_key = product.id | replace: "/", "_" | replace_first: "_", "" | append: "_description" %}
+          <p class="card-text">{{ site.data.products[product_key] }}</p>
+
+          {% if product.availableIn %}
+          <p class="card-text">
+            <span class="badge bg-primary rounded-pill">{{ site.data.products.available_in }}: {{ product.availableIn }}</span>
+          </p>
+          {% endif %}
+        </div>
+        
+        {% if product.available %}
+        <div class="order my-3">
+          {% for item in product.available %}
+          <div class="d-flex align-items-center justify-content-between mb-2 p-2 bg-light rounded">
+            <div class="d-flex align-items-center">
+              <span class="size fw-semibold me-3">{{ item.size }}</span>
+              <span class="price h6 mb-0 text-primary">{{ item.price }}</span>
+            </div>
+            <a class="btn btn-primary btn-sm" href="https://docs.google.com/forms/d/e/1FAIpQLSfpeuPAQ3K4U7P4KogWGTDFGqAFsoFpoUicib0bRe1C_FPY6Q/viewform?usp=pp_url&entry.1000027={{ product.name }} {{ item.size }} @ {{ item.price}}&entry.1863605364=10" target="_order">
+              <i class="bi bi-cart-plus"></i>
+              <span class="ms-1">Order</span>
+            </a>
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+        
+        <div class="d-flex gap-2 mt-auto">
+          {% if product.technicalSpecification %}
+          <a href="{{product.technicalSpecification}}" class="btn btn-outline-primary btn-sm" target="_download">
+            <ion-icon name="download-outline" class="me-1"></ion-icon>
+            <span>{{ site.data.products.technical_specification }}</span>
+          </a>
+          {% endif %}
+          {% if product.dataSheet %}
+          <a href="{{product.dataSheet}}" class="btn btn-outline-primary btn-sm" target="_download">
+            <ion-icon name="download-outline" class="me-1"></ion-icon>
+            <span>{{ site.data.products.sds }}</span>
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
