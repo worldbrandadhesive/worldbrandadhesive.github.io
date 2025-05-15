@@ -27,7 +27,9 @@ company_p1: 'Kami adalah pengeluar dan pengedar pelekat terkemuka di Asia Tengga
 company_p2: 'Produk kami digunakan secara meluas dalam pelbagai industri, terutamanya dalam projek pembinaan di Lapangan Terbang Antarabangsa Changi, Marina Bay dan Resorts World Sentosa.'
 singapore: 'Singapura'
 malaysia: 'Malaysia'
-email: 'E-mel'
-phone: 'Telefon'
-fax: 'Faks'
+email: E-mel
+phone: Telefon
+fax: Faks
+no_articles: Tiada artikel tersedia lagi.
+back_to_articles: Kembali ke Artikel
 
