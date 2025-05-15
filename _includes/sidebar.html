@@ -25,11 +25,11 @@
     <div class="accordion accordion-flush border rounded bg-white" id="categoriesAccordion">
       <div class="accordion-item">
         <h4 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#emissionsCollapse" aria-expanded="true">
+          <button class="accordion-button {% unless page.emission %}collapsed{% endunless %}" type="button" data-bs-toggle="collapse" data-bs-target="#emissionsCollapse" aria-expanded="{% if page.emission %}true{% else %}false{% endif %}">
             <i class="bi bi-droplet me-2"></i>{{ site.data.categories.by_emissions }}
           </button>
         </h4>
-        <div id="emissionsCollapse" class="accordion-collapse collapse show">
+        <div id="emissionsCollapse" class="accordion-collapse collapse {% if page.emission %}show{% endif %}" data-bs-parent="#categoriesAccordion">
           <div class="accordion-body p-0">
             <div class="list-group list-group-flush">
               {% for emission in emissions %}
@@ -48,11 +48,11 @@
 
       <div class="accordion-item">
         <h4 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#certificationsCollapse" aria-expanded="true">
+          <button class="accordion-button {% unless page.certification %}collapsed{% endunless %}" type="button" data-bs-toggle="collapse" data-bs-target="#certificationsCollapse" aria-expanded="{% if page.certification %}true{% else %}false{% endif %}">
             <i class="bi bi-award me-2"></i>{{ site.data.categories.by_certifications }}
           </button>
         </h4>
-        <div id="certificationsCollapse" class="accordion-collapse collapse show">
+        <div id="certificationsCollapse" class="accordion-collapse collapse {% if page.certification %}show{% endif %}" data-bs-parent="#categoriesAccordion">
           <div class="accordion-body p-0">
             <div class="list-group list-group-flush">
               {% for certification in certifications %}
@@ -71,11 +71,11 @@
 
       <div class="accordion-item">
         <h4 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#applicationsCollapse" aria-expanded="true">
+          <button class="accordion-button {% unless page.application %}collapsed{% endunless %}" type="button" data-bs-toggle="collapse" data-bs-target="#applicationsCollapse" aria-expanded="{% if page.application %}true{% else %}false{% endif %}">
             <i class="bi bi-tools me-2"></i>{{ site.data.categories.by_applications }}
           </button>
         </h4>
-        <div id="applicationsCollapse" class="accordion-collapse collapse show">
+        <div id="applicationsCollapse" class="accordion-collapse collapse {% if page.application %}show{% endif %}" data-bs-parent="#categoriesAccordion">
           <div class="accordion-body p-0">
             <div class="list-group list-group-flush">
               {% for application in applications %}
@@ -94,11 +94,11 @@
 
       <div class="accordion-item">
         <h4 class="accordion-header">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#surfacesCollapse" aria-expanded="true">
+          <button class="accordion-button {% unless page.surface %}collapsed{% endunless %}" type="button" data-bs-toggle="collapse" data-bs-target="#surfacesCollapse" aria-expanded="{% if page.surface %}true{% else %}false{% endif %}">
             <i class="bi bi-grid me-2"></i>{{ site.data.categories.by_surfaces }}
           </button>
         </h4>
-        <div id="surfacesCollapse" class="accordion-collapse collapse show">
+        <div id="surfacesCollapse" class="accordion-collapse collapse {% if page.surface %}show{% endif %}" data-bs-parent="#categoriesAccordion">
           <div class="accordion-body p-0">
             <div class="list-group list-group-flush">
               {% for surface in surfaces %}
