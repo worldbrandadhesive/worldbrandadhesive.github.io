@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
 // Handle image loading errors
 function imageError(source) {
   source.src = '/images/missing.jpg';
+  source.classList.add('img-fluid', 'rounded');
+  source.style.display = 'block';
+  source.style.margin = '0 auto';
   return true;
 }
 
