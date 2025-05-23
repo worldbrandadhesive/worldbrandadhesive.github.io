@@ -4,7 +4,6 @@ lang: en
 title: "What is SGBC Green Mark and Why Should You Care?"
 description: "Learn about the SGBC Green Mark, a certification scheme for sustainable buildings in Singapore, and why it matters for you and the environment. Discover how to make informed choices that benefit both your health and the planet."
 ---
-# What is SGBC Green Mark and Why Should You Care?
 ![SGBC Green Mark](/images/greenmark.png "SGBC Green Mark")
 
 ## SGBC Green Mark

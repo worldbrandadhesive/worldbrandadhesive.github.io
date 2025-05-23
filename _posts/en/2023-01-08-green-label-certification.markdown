@@ -4,7 +4,6 @@ lang: en
 title: "Going Green with Green Label Singapore - Your Ultimate Guide"
 description: "Discover how Green Label Singapore is driving sustainability efforts in the country, and how you can join the green revolution."
 ---
-# Going Green with Green Label Singapore - Your Ultimate Guide
 ![Green Label Singapore](/images/greenlabel.png "Green Label Singapore")
 
 ## Green Label Singapore

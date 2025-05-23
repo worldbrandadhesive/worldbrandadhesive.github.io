@@ -5,7 +5,6 @@ title: "什么是SGBC绿色标志及其重要性"
 description: "了解SGBC绿色标志，这是一个针对新加坡可持续建筑的认证计划，以及为什么它对您和环境至关重要。了解如何做出有利于您的健康和地球的明智选择。"
 ---
 
-# 什么是SGBC绿色标志及其重要性？
 ![SGBC Green Mark](/images/greenmark.png "SGBC绿色标志")
 
 ## SGBC绿色标志

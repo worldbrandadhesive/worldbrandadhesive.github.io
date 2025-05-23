@@ -5,7 +5,6 @@ title: "Keunggulan Pita Getah Sintetik dalam Mengikat Laminat kepada Plywood"
 description: "Pita getah sintetik adalah pilihan utama untuk mengikat laminat kepada plywood kerana sifatnya yang unggul. Baca untuk mengetahui mengapa."
 ---
 
-# Keunggulan Pita Getah Sintetik dalam Mengikat Laminat kepada Plywood
 ![Laminat](/images/laminate.jpg "Laminat")
 
 ## Pengenalan

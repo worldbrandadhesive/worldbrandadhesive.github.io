@@ -4,7 +4,6 @@ lang: ms
 title: "Menjadi Hijau dengan Green Label Singapore - Panduan Utama Anda"
 description: "Ketahui bagaimana Green Label Singapore memacu usaha kelestarian di negara ini, dan bagaimana anda boleh menyertai revolusi hijau."
 ---
-# Menjadi Hijau dengan Green Label Singapore - Panduan Utama Anda
 ![Green Label Singapore](/images/greenlabel.png "Green Label Singapore")
 
 ## Green Label Singapore
