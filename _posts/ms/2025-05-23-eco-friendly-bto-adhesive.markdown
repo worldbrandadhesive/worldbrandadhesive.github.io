@@ -4,7 +4,7 @@ lang: ms
 title: "Nafas Lega di BTO Baru Anda: Mengapa Pelekat Mesra Alam Penting"
 description: "Merenovasi BTO anda? Lindungi kesihatan keluarga anda dengan memilih bahan rendah VOC dan bebas formaldehid. Ketahui sebab mengapa Pelekat Mesra Alam World Brand 3000 merupakan pilihan bijak dan selamat untuk rumah moden di Singapura."
 ---
-![World Brand Adhesive](https://www.worldbrandadhesive.com/images/24@2x.jpg)
+<img src="https://www.worldbrandadhesive.com/images/24@2x.jpg" alt="World Brand Adhesive" style="max-width: 100%; height: auto;" />
 
 ## Memahami Kebimbangan Formaldehid
 
@@ -27,7 +27,7 @@ World Brand 3000 adalah pelekat berasaskan getah sintetik tanpa formaldehid yang
 - **Disahkan dengan Label Hijau Singapura**
 - **Selamat untuk pelbagai permukaan termasuk kayu, plastik, logam, dan konkrit**
 
-![Eco-Friendly Adhesive](https://www.worldbrandadhesive.com/images/greenlabel.png)
+<img src="https://www.worldbrandadhesive.com/images/greenlabel.png" alt="Eco-Friendly Adhesive" style="max-width: 100%; height: auto;" />
 
 ## Manfaat Utama untuk Renovasi BTO
 

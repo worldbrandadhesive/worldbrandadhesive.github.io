@@ -4,7 +4,7 @@ lang: zh
 title: "在您的新组屋中轻松呼吸：为何环保胶水至关重要"
 description: "正在翻新您的组屋？通过选择低挥发性有机化合物（VOC）、无甲醛材料保护您家人的健康。了解为什么世界品牌3000环保胶水是现代新加坡家庭的聪明、安全选择。"
 ---
-![World Brand Adhesive](https://www.worldbrandadhesive.com/images/24@2x.jpg)
+<img src="https://www.worldbrandadhesive.com/images/24@2x.jpg" alt="World Brand Adhesive" style="max-width: 100%; height: auto;" />
 
 ## 理解甲醛问题
 
@@ -27,7 +27,7 @@ description: "正在翻新您的组屋？通过选择低挥发性有机化合物
 - **获得新加坡绿色标签认证**
 - **适用于包括木材、塑料、金属及混凝土等多种表面**
 
-![Eco-Friendly Adhesive](https://www.worldbrandadhesive.com/images/greenlabel.png)
+<img src="https://www.worldbrandadhesive.com/images/greenlabel.png" alt="Eco-Friendly Adhesive" style="max-width: 100%; height: auto;" />
 
 ## 组屋装修的关键优势
 

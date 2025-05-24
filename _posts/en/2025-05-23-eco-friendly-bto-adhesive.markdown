@@ -4,7 +4,7 @@ lang: en
 title: "Breathe Easy in Your New BTO: Why Eco-Friendly Adhesive Matters"
 description: "Renovating your BTO? Protect your family’s health by choosing low-VOC, formaldehyde-free materials. Learn why World Brand 3000 Eco-Friendly Adhesive is a smart, safe choice for modern Singaporean homes."
 ---
-![World Brand Adhesive](https://www.worldbrandadhesive.com/images/24@2x.jpg)
+<img src="https://www.worldbrandadhesive.com/images/24@2x.jpg" alt="World Brand Adhesive" style="max-width: 100%; height: auto;" />
 
 ## Understanding the Formaldehyde Concern
 
@@ -27,7 +27,7 @@ World Brand 3000 is a formaldehyde-free, synthetic rubber-based adhesive that is
 - **Certified with the Singapore Green Label**
 - **Safe for a wide range of surfaces including wood, plastic, metal, and concrete**
 
-![Eco-Friendly Adhesive](https://www.worldbrandadhesive.com/images/greenlabel.png)
+<img src="https://www.worldbrandadhesive.com/images/greenlabel.png" alt="Eco-Friendly Adhesive" style="max-width: 100%; height: auto;" />
 
 ## Key Benefits for BTO Renovations
 
