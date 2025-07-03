@@ -99,26 +99,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn {
-  background: #E6FFAA;
   transition: all 0.3s ease;
 }
 
+.bg-primary {
+  background-color: #008091 !important;
+}
+
+.btn-outline-primary {
+  color: #008091;
+  border-color: #008091;
+}
+
 .btn:hover, .btn:focus, .btn:active {
-  color: #913F00;
-  border-color: #913F00;
+  color: #F7A463;
+  border-color: #F7A463;
   background: #FFE2CC;
 }
 
 .btn-primary {
-  color: #913F00;
-  border: 1px solid #913F00;
+  color: #F7A463;
+  border: 1px solid #F7A463;
   background: white;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: white;
-  background: #913F00;
-  border-color: #913F00;
+  background: #F7A463;
+  border-color: #F7A463;
 }
 
 .product h2 > a {
@@ -126,7 +134,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #products h1 {
-  color: #913F00;
+  color: #F7A463;
   font-size: 1.375rem;
 }
 
