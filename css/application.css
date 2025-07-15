@@ -16,13 +16,13 @@ a:hover {
   color: #669100;
 }
 
-.form-control {
-  border: 1px solid #99F3FF;
+.form-control, .form-select {
+  border: 1px solid #008091;
   color: #303C14;
 }
 
 fieldset {
-  border: 1px solid #99F3FF;
+  border: 1px solid #008091;
   padding: 1rem;
 }
 
@@ -84,12 +84,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #pitch a {
-  color: #99F3FF;
+  color: #F7A463;
   text-decoration: underline;
 }
 
 #pitch a:hover {
-  color: #CCF9FF;
+  background: #FFE2CC;
+  color: #F7A463;
 }
 
 .product {
