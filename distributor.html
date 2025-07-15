@@ -1,0 +1,107 @@
+---
+title: {{ site.data.l10n.distributor_title }}
+layout: default
+---
+
+<section class="bg-light py-5 text-start">
+  <div class="container">
+    <h2 class="display-4 fw-bold">{{ site.data.l10n.distributor_partner_title | safe }}</h2>
+    <p class="lead">{{ site.data.l10n.distributor_partner_description }}</p>
+    <a href="#apply-form" class="btn btn-success btn-lg mt-3">{{ site.data.l10n.distributor_apply_now }}</a>
+  </div>
+</section>
+
+<section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center mb-4">{{ site.data.l10n.distributor_why_partner }}</h2>
+      <div class="row text-start">
+        <div class="col-md-6 mb-4">
+          <h5>{{ site.data.l10n.distributor_reliable_quality_title }}</h5>
+          <p>{{ site.data.l10n.distributor_reliable_quality_description }}</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h5>{{ site.data.l10n.distributor_eco_title }}</h5>
+          <p>{{ site.data.l10n.distributor_eco_description | safe }}</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h5>{{ site.data.l10n.distributor_brand_title }}</h5>
+          <p>{{ site.data.l10n.distributor_brand_description }}</p>
+        </div>
+        <div class="col-md-6 mb-4">
+          <h5>{{ site.data.l10n.distributor_attractive_margins_title }}</h5>
+          <p>{{ site.data.l10n.distributor_attractive_margins_description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="apply-form" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="mb-4">{{ site.data.l10n.distributor_apply_title }}</h2>
+      <p class="mb-4">{{ site.data.l10n.distributor_apply_description }}</p>
+  
+      <form action="https://formspree.io/f/xpwlajor" method="POST">
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="company-name" class="form-label">{{ site.data.l10n.distributor_company_name }}</label>
+            <input type="text" class="form-control" id="company-name" name="Company Name" required>
+          </div>
+          <div class="col-md-6">
+            <label for="contact-name" class="form-label">{{ site.data.l10n.distributor_contact_name }}</label>
+            <input type="text" class="form-control" id="contact-name" name="Contact Name" required>
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="website" class="form-label">{{ site.data.l10n.distributor_website_url }}</label>
+            <input type="url" class="form-control" id="website" name="Website">
+          </div>
+          <div class="col-md-6">
+            <label for="job-title" class="form-label">{{ site.data.l10n.distributor_job_title }}</label>
+            <input type="text" class="form-control" id="job-title" name="Job Title">
+          </div>
+        </div>
+  
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <label for="region" class="form-label">{{ site.data.l10n.distributor_city_region }}</label>
+            <input type="text" class="form-control" id="region" name="City / Region">
+          </div>
+          <div class="col-md-6">
+            <label for="phone" class="form-label">{{ site.data.l10n.distributor_phone_number }}</label>
+            <input type="text" class="form-control" id="phone" name="Phone">
+          </div>
+        </div>
+  
+        <div class="mb-3">
+          <label for="markets" class="form-label">{{ site.data.l10n.distributor_industries }}</label>
+          <textarea class="form-control" id="markets" name="Industries Served" rows="2"></textarea>
+        </div>
+  
+        <div class="mb-3">
+          <label for="categories" class="form-label">{{ site.data.l10n.distributor_product_categories }}</label>
+          <select class="form-select" id="categories" name="Product Categories" multiple>
+            <option>{{ site.data.l10n.distributor_water_based }}</option>
+            <option>{{ site.data.l10n.distributor_formaldehyde_free }}</option>
+            <option>{{ site.data.l10n.distributor_eco_friendly }}</option>
+            <option>{{ site.data.l10n.distributor_construction }}</option>
+            <option>{{ site.data.l10n.distributor_others }}</option>
+          </select>
+        </div>
+  
+        <div class="mb-3">
+          <label for="interest" class="form-label">{{ site.data.l10n.distributor_interest }}</label>
+          <textarea class="form-control" id="interest" name="Comments" rows="3"></textarea>
+        </div>
+  
+        <!-- Optional: Success message redirect -->
+        <input type="hidden" name="_next" value="https://worldbrandadhesive.com/thank-you">
+  
+        <!-- Optional: Formspree spam protection -->
+        <input type="text" name="_gotcha" style="display:none">
+  
+        <button type="submit" class="btn btn-success">{{ site.data.l10n.distributor_submit }}</button>
+      </form>
+    </div>
+  </section>
