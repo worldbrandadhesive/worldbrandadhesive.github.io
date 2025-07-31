@@ -1,0 +1,208 @@
+body {
+  min-height: 100vh;
+  color: #303C14;
+  font-family: "Lato", sans-serif;
+  background: linear-gradient(180deg, #669100 0%, #E6FFAA 35%, #FFFFFF 100%) fixed;
+  padding-top: 76px;
+}
+
+a {
+  text-decoration: none;
+  color: #4D6711;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #669100;
+}
+
+.form-control, .form-select {
+  border: 1px solid #008091;
+  color: #303C14;
+}
+
+fieldset {
+  border: 1px solid #008091;
+  padding: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  padding-top: 0.5rem;
+  color: #303C14;
+}
+
+.home #content {
+  max-width: 960px;
+}
+
+#content {
+  background: white;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.footer {
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+.navbar-brand img {
+  height: 50px;
+  padding: 0.625rem;
+}
+
+.navbar-nav .nav-link {
+  padding: 1rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.navbar-nav .nav-link.active {
+  color: #669100;
+}
+
+#pitch {
+  background: #CCF9FF !important;
+  padding: 2rem 0;
+}
+
+.pitch-icon {
+  background-color: #008091;
+  color: white;
+  border-radius: 15px;
+  width: 60px; /* Adjust as needed */
+  height: 60px; /* Adjust as needed */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem; /* Adjust as needed */
+}
+
+#pitch p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+#pitch a {
+  color: #F7A463;
+  text-decoration: underline;
+}
+
+#pitch a:hover {
+  background: #FFE2CC;
+  color: #F7A463;
+}
+
+.product {
+  border-bottom: 1px solid #E6FFAA;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.bg-primary {
+  background-color: #008091 !important;
+}
+
+.btn-outline-primary {
+  color: #008091;
+  border-color: #008091;
+}
+
+.btn:hover, .btn:focus, .btn:active {
+  color: #F7A463;
+  border-color: #F7A463;
+  background: #FFE2CC;
+}
+
+.btn-primary {
+  color: #F7A463;
+  border: 1px solid #F7A463;
+  background: white;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  color: white;
+  background: #F7A463;
+  border-color: #F7A463;
+}
+
+.product h2 > a {
+  color: #669100;
+}
+
+#products h1 {
+  color: #F7A463;
+  font-size: 1.375rem;
+}
+
+#references img {
+  max-width: 100%;
+  height: auto;
+}
+
+.carousel-item {
+  height: 500px;
+  background-color: #000;
+}
+
+.carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  opacity: 0.7;
+}
+
+.carousel-caption {
+  background: rgba(48, 60, 20, 0.9);
+  left: 0;
+  right: 0;
+  bottom: 3rem;
+  padding: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.carousel-caption h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.carousel-caption p {
+  font-size: 1.25rem;
+  margin-bottom: 0;
+  color: #E6FFAA;
+}
+
+.carousel-indicators {
+  margin-bottom: 0.5rem;
+  z-index: 2;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  z-index: 3;
+}
+
+/* WhatsApp Button Styling */
+.btn-success {
+  background-color: #25D366 !important;
+  border-color: #25D366 !important;
+  color: white !important;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active {
+  background-color: #25D366 !important;
+  border-color: #25D366 !important;
+  color: white !important;
+  opacity: 0.9;
+}
+
+.btn-success i {
+  font-size: 1.2rem;
+}
