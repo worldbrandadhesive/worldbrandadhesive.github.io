@@ -2,26 +2,22 @@
 title: Corporate
 layout: default
 ---
-<div class="container-fluid px-md-4">
-  <div class="row g-4">
-    <div class="col-lg-6">
-      <div class="card h-100 border-0 bg-white">
-        <div class="card-body">
-          <h1>{{ site.data.l10n.about_us }}</h1>
-          <p>{{ site.data.l10n.company_p1 }}</p>
-          <p class="mb-0">{{ site.data.l10n.company_p2 }}</p>
+<div class="container-fluid px-md-4 py-4">
+  <div class="row g-4" style="min-height: calc(80vh - 68px);">
+    <div class="col-lg-6 d-flex">
+      <div class="card w-100">
+        <div class="card-body d-flex flex-column justify-content-center p-4 p-lg-5">
+          <h1 class="mb-4">{{ site.data.l10n.about_us }}</h1>
+          <p class="mb-4" style="font-size: 1.05rem; line-height: 1.75;">{{ site.data.l10n.company_p1 }}</p>
+          <p class="mb-0" style="color: var(--text-muted);">{{ site.data.l10n.company_p2 }}</p>
         </div>
       </div>
     </div>
 
-    <div class="col-lg-6">
-      <div class="card h-100 border-0 bg-white">
-        <div class="card-body p-0">
-          <img alt="Northlink-building" class="img-fluid rounded w-100 h-100 object-fit-cover" src="/images/northlink-building.jpg?1420046369" />
-        </div>
+    <div class="col-lg-6 d-flex">
+      <div class="card w-100 overflow-hidden" style="min-height: 360px;">
+        <img alt="Northlink Building" class="w-100 h-100 object-fit-cover" src="/images/northlink-building.jpg?1420046369" style="object-fit: cover;" />
       </div>
     </div>
   </div>
 </div>
-
-
