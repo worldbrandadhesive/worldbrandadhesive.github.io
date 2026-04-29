@@ -38,18 +38,26 @@
         </div>
         {% endif %}
         
-        <div class="d-flex gap-2 mt-auto">
+        <div class="d-flex gap-2 mt-auto" style="position: relative; z-index: 2;">
           {% if product.technicalSpecification %}
-          <a href="{{product.technicalSpecification}}" class="btn btn-outline-primary btn-sm" target="_download">
-            <ion-icon name="download-outline" class="me-1"></ion-icon>
+          <button type="button" class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal" data-bs-target="#downloadGateModal"
+                  data-download-url="{{ product.technicalSpecification }}"
+                  data-download-label="{{ site.data.products.technical_specification }}"
+                  data-product-name="{{ product.name | escape }}">
+            <i class="bi bi-download"></i>
             <span>{{ site.data.products.technical_specification }}</span>
-          </a>
+          </button>
           {% endif %}
           {% if product.dataSheet %}
-          <a href="{{product.dataSheet}}" class="btn btn-outline-primary btn-sm" target="_download">
-            <ion-icon name="download-outline" class="me-1"></ion-icon>
+          <button type="button" class="btn btn-outline-primary btn-sm"
+                  data-bs-toggle="modal" data-bs-target="#downloadGateModal"
+                  data-download-url="{{ product.dataSheet }}"
+                  data-download-label="{{ site.data.products.sds }}"
+                  data-product-name="{{ product.name | escape }}">
+            <i class="bi bi-download"></i>
             <span>{{ site.data.products.sds }}</span>
-          </a>
+          </button>
           {% endif %}
         </div>
       </div>

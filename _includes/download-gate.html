@@ -1,0 +1,102 @@
+<div class="modal fade" id="downloadGateModal" tabindex="-1" aria-labelledby="downloadGateLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius: var(--radius-lg); border: 1px solid var(--border-light);">
+      <div class="modal-header" style="border-bottom: 1px solid var(--border-light);">
+        <h5 class="modal-title" id="downloadGateLabel" style="font-family: 'Playfair Display', Georgia, serif; color: var(--green-deep);">Download Document</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.9rem; color: var(--text-muted);">Please share a few details and your download will begin immediately.</p>
+        <form id="download-gate-form" novalidate>
+          <div class="mb-3">
+            <label for="dl-name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="dl-name" name="Name" required autocomplete="name">
+          </div>
+          <div class="mb-3">
+            <label for="dl-email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="dl-email" name="Email" required autocomplete="email">
+          </div>
+          <div class="mb-3">
+            <label for="dl-company" class="form-label">Company <span style="font-weight: 400; color: var(--text-muted);">(optional)</span></label>
+            <input type="text" class="form-control" id="dl-company" name="Company" autocomplete="organization">
+          </div>
+          <input type="hidden" id="dl-document" name="Document">
+          <input type="hidden" id="dl-product" name="Product">
+        </form>
+      </div>
+      <div class="modal-footer" style="border-top: 1px solid var(--border-light);">
+        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" form="download-gate-form" class="btn btn-primary" id="download-gate-submit">
+          <i class="bi bi-download"></i>Download
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var ENDPOINT = 'https://formspree.io/f/xlgaqplv';
+
+  var modal = document.getElementById('downloadGateModal');
+  if (!modal) return;
+
+  var form = document.getElementById('download-gate-form');
+  var submitBtn = document.getElementById('download-gate-submit');
+  var docInput = document.getElementById('dl-document');
+  var productInput = document.getElementById('dl-product');
+
+  modal.addEventListener('show.bs.modal', function (e) {
+    var btn = e.relatedTarget;
+    docInput.value = btn.dataset.downloadLabel || '';
+    productInput.value = btn.dataset.productName || '';
+    form.dataset.url = btn.dataset.downloadUrl || '';
+    document.getElementById('downloadGateLabel').textContent = 'Download ' + (btn.dataset.downloadLabel || 'Document');
+  });
+
+  modal.addEventListener('hidden.bs.modal', function () {
+    form.reset();
+    form.classList.remove('was-validated');
+    submitBtn.disabled = false;
+    submitBtn.innerHTML = '<i class="bi bi-download"></i>Download';
+  });
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    if (!form.checkValidity()) {
+      form.classList.add('was-validated');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending…';
+
+    try {
+      var res = await fetch(ENDPOINT, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (res.ok) {
+        var a = document.createElement('a');
+        a.href = form.dataset.url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        bootstrap.Modal.getInstance(modal).hide();
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="bi bi-download"></i>Download';
+        alert('Something went wrong. Please try again.');
+      }
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="bi bi-download"></i>Download';
+      alert('Something went wrong. Please try again.');
+    }
+  });
+})();
+</script>

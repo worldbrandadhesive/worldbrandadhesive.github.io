@@ -39,14 +39,22 @@
       
       <div class="d-flex flex-wrap gap-2">
         {% if product.technicalSpecification %}
-        <a href="{{product.technicalSpecification}}" class="btn btn-outline-primary" target="_download">
-          <ion-icon name="download-outline" class="me-2"></ion-icon>{{ site.data.products.technical_specification }}
-        </a>
+        <button type="button" class="btn btn-outline-primary"
+                data-bs-toggle="modal" data-bs-target="#downloadGateModal"
+                data-download-url="{{ product.technicalSpecification }}"
+                data-download-label="{{ site.data.products.technical_specification }}"
+                data-product-name="{{ product.name | escape }}">
+          <i class="bi bi-download"></i>{{ site.data.products.technical_specification }}
+        </button>
         {% endif %}
         {% if product.dataSheet %}
-        <a href="{{product.dataSheet}}" class="btn btn-outline-primary" target="_download">
-          <ion-icon name="download-outline" class="me-2"></ion-icon>{{ site.data.products.sds }}
-        </a>
+        <button type="button" class="btn btn-outline-primary"
+                data-bs-toggle="modal" data-bs-target="#downloadGateModal"
+                data-download-url="{{ product.dataSheet }}"
+                data-download-label="{{ site.data.products.sds }}"
+                data-product-name="{{ product.name | escape }}">
+          <i class="bi bi-download"></i>{{ site.data.products.sds }}
+        </button>
         {% endif %}
       </div>
     </div>
