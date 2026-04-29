@@ -655,6 +655,35 @@ fieldset {
 }
 
 /* ============================================
+   Article callout box
+   ============================================ */
+
+.callout-action {
+  background: var(--green-ghost);
+  border-left: 4px solid var(--green-deep);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2rem;
+  margin: 2rem 0;
+}
+
+.callout-action h3 {
+  color: var(--green-deep);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.callout-action ul {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.callout-action li {
+  margin-bottom: 0.375rem;
+  color: var(--text-body);
+}
+
+/* ============================================
    Scrollbar
    ============================================ */
 

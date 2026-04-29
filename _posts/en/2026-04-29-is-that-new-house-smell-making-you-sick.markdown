@@ -13,6 +13,16 @@ CNA's *Talking Point* investigates a question many homeowners never think to ask
 
 The answer, as the documentary shows, is largely formaldehyde — a chemical compound classified as a human carcinogen that off-gasses from adhesives, laminates, composite wood panels, and other building materials commonly used in home renovations.
 
+<div class="callout-action">
+  <h3>What You Can Do</h3>
+  <p>When briefing your contractor or interior designer, ask specifically:</p>
+  <ul>
+    <li><strong>What adhesives will you be using?</strong></li>
+    <li><strong>Are they formaldehyde-free and Green Label certified?</strong></li>
+  </ul>
+  <p>Specifying <a href="/products/3000.html">World Brand 3000</a> or <a href="/products/301.html">World Brand 301</a> is a straightforward way to reduce indoor formaldehyde levels in your home from day one — without compromising on bond strength or durability.</p>
+</div>
+
 ## What the Research Shows
 
 Formaldehyde is colourless, fast-evaporating, and present in concentrations that build up quickly in enclosed spaces. Symptoms of exposure include:
@@ -32,8 +42,6 @@ The good news: the formaldehyde is in the chemistry, not the function. High-perf
 
 ## Our Formaldehyde-Free Solutions
 
-We manufacture two adhesives specifically designed to eliminate this risk:
-
 ### [World Brand 3000 Eco-Friendly Contact Adhesive](/products/3000.html)
 
 A synthetic rubber-based contact adhesive certified with the **Singapore Green Label** and **SGBC Green Mark**. Formaldehyde-free and low in VOCs, it bonds cement, ceramics, hardboard, linoleum, plastics, rubber, and wood — making it ideal for flooring and general renovation work.
@@ -41,14 +49,5 @@ A synthetic rubber-based contact adhesive certified with the **Singapore Green L
 ### [World Brand 301 Formaldehyde Free Adhesive](/products/301.html)
 
 A versatile woodworking and general-purpose adhesive that bonds hardboard, leather, metal, plastics, rubber, and wood without any formaldehyde emissions. Designed for contractors and cabinet makers who need strong, reliable bonds with a clean health profile.
-
-## What You Can Do
-
-When briefing your contractor or interior designer, ask specifically:
-
-- **What adhesives will you be using?**
-- **Are they formaldehyde-free and Green Label certified?**
-
-Specifying World Brand 3000 or 301 is a straightforward way to reduce indoor formaldehyde levels in your home from day one — without compromising on bond strength or durability.
 
 A renovation is a significant investment. The materials you choose now determine the air your family breathes for years to come.
