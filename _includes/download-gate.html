@@ -9,6 +9,7 @@
       </div>
       <div class="modal-body">
         <p style="font-size: 0.9rem; color: var(--text-muted);">{{ site.data.l10n.dl_modal_description }}</p>
+        <div id="dl-error" class="alert alert-danger d-none" role="alert" style="font-size: 0.875rem;"></div>
         <form id="download-gate-form" novalidate>
           <div class="mb-3">
             <label for="dl-name" class="form-label">{{ site.data.l10n.dl_name }}</label>
@@ -49,9 +50,31 @@
 
   var form = document.getElementById('download-gate-form');
   var submitBtn = document.getElementById('download-gate-submit');
+  var errorBox = document.getElementById('dl-error');
   var docInput = document.getElementById('dl-document');
   var productInput = document.getElementById('dl-product');
   var titlePrefix = modal.dataset.titlePrefix || 'Download';
+  var downloadLabel = '<i class="bi bi-download"></i>{{ site.data.l10n.dl_download }}';
+
+  function showError(msg) {
+    errorBox.textContent = msg;
+    errorBox.classList.remove('d-none');
+  }
+
+  function clearError() {
+    errorBox.textContent = '';
+    errorBox.classList.add('d-none');
+  }
+
+  function errorForStatus(status) {
+    switch (status) {
+      case 429: return 'Too many attempts. Please wait a moment and try again.';
+      case 403: return 'This form is currently unavailable. Please contact us directly at sales@worldbrandadhesive.com.';
+      case 402: return 'Our form service is temporarily over capacity. Please contact us directly at sales@worldbrandadhesive.com.';
+      case 400: return 'Your submission could not be processed. Please check your details and try again.';
+      default:  return 'Something went wrong on our end. Please try again or contact us at sales@worldbrandadhesive.com.';
+    }
+  }
 
   modal.addEventListener('show.bs.modal', function (e) {
     var btn = e.relatedTarget;
@@ -64,12 +87,14 @@
   modal.addEventListener('hidden.bs.modal', function () {
     form.reset();
     form.classList.remove('was-validated');
+    clearError();
     submitBtn.disabled = false;
-    submitBtn.innerHTML = '<i class="bi bi-download"></i>{{ site.data.l10n.dl_download }}';
+    submitBtn.innerHTML = downloadLabel;
   });
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
+    clearError();
     if (!form.checkValidity()) {
       form.classList.add('was-validated');
       return;
@@ -96,13 +121,13 @@
         bootstrap.Modal.getInstance(modal).hide();
       } else {
         submitBtn.disabled = false;
-        submitBtn.innerHTML = '<i class="bi bi-download"></i>{{ site.data.l10n.dl_download }}';
-        alert('Something went wrong. Please try again.');
+        submitBtn.innerHTML = downloadLabel;
+        showError(errorForStatus(res.status));
       }
     } catch (err) {
       submitBtn.disabled = false;
-      submitBtn.innerHTML = '<i class="bi bi-download"></i>{{ site.data.l10n.dl_download }}';
-      alert('Something went wrong. Please try again.');
+      submitBtn.innerHTML = downloadLabel;
+      showError('Unable to reach our server. Please check your connection and try again.');
     }
   });
 })();
