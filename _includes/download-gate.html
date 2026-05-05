@@ -55,6 +55,14 @@
   var productInput = document.getElementById('dl-product');
   var titlePrefix = modal.dataset.titlePrefix || 'Download';
   var downloadLabel = '<i class="bi bi-download"></i>{{ site.data.l10n.dl_download }}';
+  var ERRORS = {
+    429:     '{{ site.data.l10n.dl_error_429 }}',
+    403:     '{{ site.data.l10n.dl_error_403 }}',
+    402:     '{{ site.data.l10n.dl_error_402 }}',
+    400:     '{{ site.data.l10n.dl_error_400 }}',
+    default: '{{ site.data.l10n.dl_error_default }}',
+    network: '{{ site.data.l10n.dl_error_network }}'
+  };
 
   function showError(msg) {
     errorBox.textContent = msg;
@@ -67,13 +75,7 @@
   }
 
   function errorForStatus(status) {
-    switch (status) {
-      case 429: return 'Too many attempts. Please wait a moment and try again.';
-      case 403: return 'This form is currently unavailable. Please contact us directly at sales@worldbrandadhesive.com.';
-      case 402: return 'Our form service is temporarily over capacity. Please contact us directly at sales@worldbrandadhesive.com.';
-      case 400: return 'Your submission could not be processed. Please check your details and try again.';
-      default:  return 'Something went wrong on our end. Please try again or contact us at sales@worldbrandadhesive.com.';
-    }
+    return ERRORS[status] || ERRORS.default;
   }
 
   modal.addEventListener('show.bs.modal', function (e) {
@@ -127,7 +129,7 @@
     } catch (err) {
       submitBtn.disabled = false;
       submitBtn.innerHTML = downloadLabel;
-      showError('Unable to reach our server. Please check your connection and try again.');
+      showError(ERRORS.network);
     }
   });
 })();

@@ -67,3 +67,9 @@ dl_modal_description: Sila kongsikan beberapa maklumat dan muat turun anda akan 
 dl_name: Nama
 dl_cancel: Batal
 dl_download: Muat Turun
+dl_error_429: Terlalu banyak percubaan. Sila tunggu sebentar dan cuba lagi.
+dl_error_403: Borang ini tidak tersedia buat masa ini. Sila hubungi kami di sales@worldbrandadhesive.com.
+dl_error_402: Perkhidmatan borang kami sedang melebihi kapasiti. Sila hubungi kami di sales@worldbrandadhesive.com.
+dl_error_400: Penyerahan anda tidak dapat diproses. Sila semak butiran anda dan cuba lagi.
+dl_error_default: Sesuatu telah berlaku. Sila cuba lagi atau hubungi kami di sales@worldbrandadhesive.com.
+dl_error_network: Tidak dapat menghubungi pelayan kami. Sila semak sambungan anda dan cuba lagi.

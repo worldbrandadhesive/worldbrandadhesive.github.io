@@ -67,3 +67,9 @@ dl_modal_description: Please share a few details and your download will begin im
 dl_name: Name
 dl_cancel: Cancel
 dl_download: Download
+dl_error_429: Too many attempts. Please wait a moment and try again.
+dl_error_403: This form is currently unavailable. Please contact us at sales@worldbrandadhesive.com.
+dl_error_402: Our form service is temporarily over capacity. Please contact us at sales@worldbrandadhesive.com.
+dl_error_400: Your submission could not be processed. Please check your details and try again.
+dl_error_default: Something went wrong. Please try again or contact us at sales@worldbrandadhesive.com.
+dl_error_network: Unable to reach our server. Please check your connection and try again.
