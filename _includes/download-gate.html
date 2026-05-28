@@ -44,6 +44,7 @@
 <script>
 (function () {
   var ENDPOINT = 'https://formspree.io/f/xlgaqplv';
+  var STORAGE_PREFIX = 'wba_dl_';
 
   var modal = document.getElementById('downloadGateModal');
   if (!modal) return;
@@ -64,6 +65,34 @@
     network: '{{ site.data.l10n.dl_error_network }}'
   };
 
+  function storageKey(productName) {
+    return STORAGE_PREFIX + productName.replace(/\W+/g, '_');
+  }
+
+  var EXPIRY_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
+
+  function hasSubmitted(productName) {
+    try {
+      var raw = localStorage.getItem(storageKey(productName));
+      if (!raw) return false;
+      return (Date.now() - parseInt(raw, 10)) < EXPIRY_MS;
+    } catch (e) { return false; }
+  }
+
+  function markSubmitted(productName) {
+    try { localStorage.setItem(storageKey(productName), String(Date.now())); } catch (e) {}
+  }
+
+  function triggerDownload(url) {
+    var a = document.createElement('a');
+    a.href = url;
+    a.target = '_blank';
+    a.rel = 'noopener';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+  }
+
   function showError(msg) {
     errorBox.textContent = msg;
     errorBox.classList.remove('d-none');
@@ -80,9 +109,18 @@
 
   modal.addEventListener('show.bs.modal', function (e) {
     var btn = e.relatedTarget;
+    var productName = btn.dataset.productName || '';
+    var downloadUrl = btn.dataset.downloadUrl || '';
+
+    if (productName && hasSubmitted(productName)) {
+      e.preventDefault();
+      triggerDownload(downloadUrl);
+      return;
+    }
+
     docInput.value = btn.dataset.downloadLabel || '';
-    productInput.value = btn.dataset.productName || '';
-    form.dataset.url = btn.dataset.downloadUrl || '';
+    productInput.value = productName;
+    form.dataset.url = downloadUrl;
     document.getElementById('downloadGateLabel').textContent = titlePrefix + ' ' + (btn.dataset.downloadLabel || '');
   });
 
@@ -113,13 +151,8 @@
       });
 
       if (res.ok) {
-        var a = document.createElement('a');
-        a.href = form.dataset.url;
-        a.target = '_blank';
-        a.rel = 'noopener';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
+        markSubmitted(productInput.value);
+        triggerDownload(form.dataset.url);
         bootstrap.Modal.getInstance(modal).hide();
       } else {
         submitBtn.disabled = false;
