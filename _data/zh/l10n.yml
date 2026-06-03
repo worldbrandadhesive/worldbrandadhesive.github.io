@@ -73,3 +73,4 @@ dl_error_402: '我们的表格服务暂时超出容量，请直接联系我们�
 dl_error_400: '您的提交无法处理，请检查您的资料后重试。'
 dl_error_default: '出现了问题，请重试或联系我们：sales@worldbrandadhesive.com。'
 dl_error_network: '无法连接到我们的服务器，请检查您的网络连接后重试。'
+dl_error_phone: '请输入有效的电话号码。'

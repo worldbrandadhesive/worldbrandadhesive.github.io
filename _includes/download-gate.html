@@ -41,6 +41,9 @@
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/intlTelInput.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18/build/js/utils.js"></script>
+<style>.iti { width: 100%; }</style>
 <script>
 (function () {
   var ENDPOINT = 'https://formspree.io/f/xlgaqplv';
@@ -54,6 +57,7 @@
   var errorBox = document.getElementById('dl-error');
   var docInput = document.getElementById('dl-document');
   var productInput = document.getElementById('dl-product');
+  var phoneInput = document.getElementById('dl-phone');
   var titlePrefix = modal.dataset.titlePrefix || 'Download';
   var downloadLabel = '<i class="bi bi-download"></i>{{ site.data.l10n.dl_download }}';
   var ERRORS = {
@@ -62,8 +66,20 @@
     402:     '{{ site.data.l10n.dl_error_402 }}',
     400:     '{{ site.data.l10n.dl_error_400 }}',
     default: '{{ site.data.l10n.dl_error_default }}',
-    network: '{{ site.data.l10n.dl_error_network }}'
+    network: '{{ site.data.l10n.dl_error_network }}',
+    phone:   '{{ site.data.l10n.dl_error_phone }}'
   };
+
+  var iti = null;
+  try {
+    iti = window.intlTelInput(phoneInput, {
+      separateDialCode: true,
+      preferredCountries: ['sg', 'my'],
+      initialCountry: 'sg'
+    });
+  } catch (e) {
+    console.error('intl-tel-input init error:', e);
+  }
 
   function storageKey(productName) {
     return STORAGE_PREFIX + productName.replace(/\W+/g, '_');
@@ -132,21 +148,44 @@
     submitBtn.innerHTML = downloadLabel;
   });
 
+  function validatePhone() {
+    if (iti && window.intlTelInputUtils) {
+      return iti.getValidationError() === 0;
+    }
+    var val = phoneInput.value.trim();
+    var digits = val.replace(/\D/g, '');
+    return /^[+\d\s\-().]{7,20}$/.test(val) && digits.length >= 7;
+  }
+
+  phoneInput.addEventListener('input', function () { phoneInput.setCustomValidity(''); });
+  phoneInput.addEventListener('countrychange', function () { phoneInput.setCustomValidity(''); });
+
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
     clearError();
+
+    var phoneValid = validatePhone();
+    phoneInput.setCustomValidity(phoneValid ? '' : 'invalid');
+
     if (!form.checkValidity()) {
       form.classList.add('was-validated');
+      if (!phoneValid) showError(ERRORS.phone);
       return;
     }
 
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Sending…';
 
+    phoneInput.setCustomValidity('');
+    var prevPhone = phoneInput.value;
+    phoneInput.value = iti ? iti.getNumber() : phoneInput.value;
+    var formData = new FormData(form);
+    phoneInput.value = prevPhone;
+
     try {
       var res = await fetch(ENDPOINT, {
         method: 'POST',
-        body: new FormData(form),
+        body: formData,
         headers: { Accept: 'application/json' }
       });
 

@@ -73,3 +73,4 @@ dl_error_402: Our form service is temporarily over capacity. Please contact us a
 dl_error_400: Your submission could not be processed. Please check your details and try again.
 dl_error_default: Something went wrong. Please try again or contact us at sales@worldbrandadhesive.com.
 dl_error_network: Unable to reach our server. Please check your connection and try again.
+dl_error_phone: Please enter a valid phone number.
