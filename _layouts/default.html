@@ -34,6 +34,29 @@
     <meta content="authenticity_token" name="csrf-param" />
     <meta content="PiVctG5PkuXKs4a108IboUccYUVRiTZmX2VlUg9bG3o=" name="csrf-token" />
     {% seo %}
+    {% assign _base_url = page.url %}
+    {% if site.active_lang != site.default_lang %}
+      {% assign _lang_prefix = '/' | append: site.active_lang %}
+      {% assign _base_url = page.url | remove_first: _lang_prefix %}
+    {% endif %}
+    {% for lang in site.languages %}
+      {% if lang == site.default_lang %}{% assign _lang_url = _base_url %}{% else %}{% assign _lang_url = '/' | append: lang | append: _base_url %}{% endif %}
+      <link rel="alternate" hreflang="{{ lang }}" href="{{ site.url }}{{ _lang_url }}" />
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ _base_url }}" />
+    {% assign _og_image = page.image | default: site.image %}
+    {% if _og_image %}
+    <meta property="og:image" content="{{ _og_image | absolute_url }}" />
+    <meta name="twitter:image" content="{{ _og_image | absolute_url }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {% endif %}
+    {% if page.page_description_key %}
+      {% assign _l10n_desc = site.data.l10n[page.page_description_key] %}
+      {% if _l10n_desc %}
+    <meta name="description" content="{{ _l10n_desc | xml_escape }}" />
+    <meta property="og:description" content="{{ _l10n_desc | xml_escape }}" />
+      {% endif %}
+    {% endif %}
   </head>
   <body class="home d-flex flex-column h-100">
     <header>

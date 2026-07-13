@@ -217,7 +217,8 @@ a:hover {
   text-shadow: none;
 }
 
-.carousel-caption h1 {
+.carousel-caption h1,
+.carousel-caption h2 {
   font-size: 2rem;
   font-weight: 700;
   color: var(--cream);

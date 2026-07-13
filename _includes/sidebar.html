@@ -36,7 +36,7 @@
                 {% if page.emission == emission %}
                   {% assign active = 'active' %}
                 {% endif %}
-                <a href="/{{prefix}}categories/emissions/{{ emission }}" class="list-group-item list-group-item-action {{ active }}" id="{{ emission }}">
+                <a href="/{{prefix}}categories/emissions/{{ emission | downcase | replace: ' ', '-' }}" class="list-group-item list-group-item-action {{ active }}" id="{{ emission }}">
                   {{ site.data.categories[emission] }}
                 </a>
                 {% assign active = '' %}
@@ -59,7 +59,7 @@
                 {% if page.certification == certification %}
                   {% assign active = 'active' %}
                 {% endif %}
-                <a href="/{{prefix}}categories/certifications/{{ certification }}" class="list-group-item list-group-item-action {{ active }}" id="{{ certification }}">
+                <a href="/{{prefix}}categories/certifications/{{ certification | downcase | replace: ' ', '-' }}" class="list-group-item list-group-item-action {{ active }}" id="{{ certification }}">
                   {{ site.data.categories[certification]}}
                 </a>
                 {% assign active = '' %}
@@ -82,7 +82,7 @@
                 {% if page.application == application %}
                   {% assign active = 'active' %}
                 {% endif %}
-                <a href="/{{prefix}}categories/applications/{{ application }}" class="list-group-item list-group-item-action {{ active }}" id="{{ application }}">
+                <a href="/{{prefix}}categories/applications/{{ application | downcase | replace: ' ', '-' }}" class="list-group-item list-group-item-action {{ active }}" id="{{ application }}">
                   {{ site.data.categories[application] }}
                 </a>
                 {% assign active = '' %}
@@ -105,7 +105,7 @@
                 {% if page.surface == surface %}
                   {% assign active = 'active' %}
                 {% endif %}
-                <a href="/{{prefix}}categories/surfaces/{{ surface }}" class="list-group-item list-group-item-action {{ active }}" id="{{ surface }}">
+                <a href="/{{prefix}}categories/surfaces/{{ surface | downcase | replace: ' ', '-' }}" class="list-group-item list-group-item-action {{ active }}" id="{{ surface }}">
                   {{ site.data.categories[surface] }}
                 </a>
                 {% assign active = '' %}

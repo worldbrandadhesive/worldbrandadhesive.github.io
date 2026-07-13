@@ -17,6 +17,8 @@ title: World Brand Adhesive Website
 email: chpeck@worldbrandadhesive.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.worldbrandadhesive.com"
+image: /images/slide3.jpg
+logo: /images/logo_v2.png
 #twitter_username: jekyllrb
 #github_username:  jekyll
 

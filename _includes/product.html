@@ -1,7 +1,7 @@
 <div class="card product mb-4 border-0 shadow-sm h-100">
   <div class="row g-0 h-100">
     <div class="col-md-4 bg-white d-flex align-items-center justify-content-center" style="min-width: 130px;">
-      <a href="{{ product.id }}.html" class="d-block" style="width: 130px; height: 130px;">
+      <a href="{{ product.url }}" class="d-block" style="width: 130px; height: 130px;">
         <img alt="{{ product.name }}" onerror="imageError(this)" src="{{ product.imageSource }}" class="img-fluid rounded-start w-100 h-100 object-fit-cover" />
       </a>
     </div>
@@ -9,7 +9,7 @@
       <div class="card-body d-flex flex-column h-100">
         <div>
           <h2 class="card-title h4">
-            <a href="{{ product.id }}.html" class="text-decoration-none stretched-link">{{ product.name }}</a>
+            <a href="{{ product.url }}" class="text-decoration-none stretched-link">{{ product.name }}</a>
           </h2>
           {% assign product_key = product.id | replace: "/", "_" | replace_first: "_", "" | append: "_description" %}
           <p class="card-text">{{ site.data.products[product_key] }}</p>
